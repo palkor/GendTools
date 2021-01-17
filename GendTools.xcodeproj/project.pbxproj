@@ -20,6 +20,7 @@
 		50C77F0225AA6193000204B3 /* EthyloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77F0125AA6193000204B3 /* EthyloViewController.swift */; };
 		50C77F0625AA6803000204B3 /* natinfdb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50C77F0525AA6803000204B3 /* natinfdb.plist */; };
 		50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */; };
+		50DD166B25B35FEA007D399B /* Natinf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD166A25B35FEA007D399B /* Natinf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		50C77F0125AA6193000204B3 /* EthyloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthyloViewController.swift; sourceTree = "<group>"; };
 		50C77F0525AA6803000204B3 /* natinfdb.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = natinfdb.plist; sourceTree = "<group>"; };
 		50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatinfTableViewCell.swift; sourceTree = "<group>"; };
+		50DD166A25B35FEA007D399B /* Natinf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Natinf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		505BED5B25AA53F6000EE460 /* GendTools */ = {
 			isa = PBXGroup;
 			children = (
+				50DD166D25B35FF3007D399B /* Model */,
 				505BED7525AA550D000EE460 /* Views */,
 				505BED5C25AA53F6000EE460 /* AppDelegate.swift */,
 				505BED5E25AA53F6000EE460 /* SceneDelegate.swift */,
@@ -94,6 +97,14 @@
 				505BED7225AA5501000EE460 /* MainTabBarControllerViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50DD166D25B35FF3007D399B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50DD166A25B35FEA007D399B /* Natinf.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				505BED5D25AA53F6000EE460 /* AppDelegate.swift in Sources */,
 				50C77F0225AA6193000204B3 /* EthyloViewController.swift in Sources */,
 				505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */,
+				50DD166B25B35FEA007D399B /* Natinf.swift in Sources */,
 				50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */,
 				505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */,
 				50C77EFF25AA615D000204B3 /* DetailNatinfViewController.swift in Sources */,

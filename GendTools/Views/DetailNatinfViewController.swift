@@ -20,10 +20,10 @@ class DetailNatinfViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ui_label_qualification.text = natinfSelected["Qualification"] as? String
-        ui_label_natinf.text = String(natinfSelected["Natinf"] as! Int)
-        ui_label_classe.text = "Classe : " + String(natinfSelected["Classe"] as! Int)
-        ui_label_montant_amende.text = "Montant de l'amende : " + String(natinfSelected["Montant_amende"] as! Int)
+       
+        
+        
+        
         if (Int(natinfSelected["Montant_minore"] as?Int ?? 0) != 0) {
             ui_label_montant_amende_minoree.text = "Montant de l'amende minorée : " + String(natinfSelected ["Montant_minore"] as! Int)
             
