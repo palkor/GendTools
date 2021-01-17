@@ -10,6 +10,7 @@ import UIKit
 class DetailNatinfViewController: UIViewController {
     
     var natinfSelected = [String:Any]()
+    var natinfNatinf: Natinf?
     
     @IBOutlet weak var ui_label_qualification: UILabel!
     @IBOutlet weak var ui_label_natinf: UILabel!
@@ -19,28 +20,12 @@ class DetailNatinfViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
-        
-        
-        if (Int(natinfSelected["Montant_minore"] as?Int ?? 0) != 0) {
-            ui_label_montant_amende_minoree.text = "Montant de l'amende minorée : " + String(natinfSelected ["Montant_minore"] as! Int)
-            
-        }
-        
-        // Do ay additional setup after loading the view.
+        ui_label_qualification.text = natinfNatinf?.qualification
+        ui_label_natinf.text = String(natinfNatinf!.natinf)
+        ui_label_classe.text = String(natinfNatinf!.classe)
+        ui_label_montant_amende.text = String(natinfNatinf!.montant_amende)
+        ui_label_montant_amende_minoree.text = natinfNatinf?.montant_amende_minore
+      
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

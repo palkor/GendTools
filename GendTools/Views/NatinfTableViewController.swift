@@ -13,6 +13,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
     var _natinfItems = [[String:Any]]() // Tableau de dictionnaires du fichier PLIST
     var _natinfsArray = [Natinf]()  // tableau avec objets NATINF
     var _filteredsNatinfArray = [Natinf]() // tableau résultats searchBar
+    var selectedNatinf:Natinf?
     let searchController = UISearchController(searchResultsController: nil) // barre de recherche
 
     override func viewDidLoad() {
@@ -46,10 +47,12 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
             }
         }
         
+        // MARK: - Création du tableau d'objet NATINF à partir du tableau brut de données.
+        
         for i in 0 ... (_natinfItems.count) - 1 {
             
-          _natinfsArray.append(Natinf(qualification: _natinfItems[i]["QualificationPVe"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as! Int, famille: _natinfItems[i]["Famille"] as! String))
-    
+            _natinfsArray.append(Natinf(qualification: _natinfItems[i]["QualificationPVe"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String))
+          //  montant_amende_minore: _natinfItems[i]["Montant_minore"] as! Strin
         }
         
     }
@@ -58,23 +61,64 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return _filteredsNatinfArray.count
+       
+        } else {
         
         return self._natinfsArray.count
+        }
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:NatinfTableViewCell! = (tableView.dequeueReusableCell(withIdentifier: "cell") as! NatinfTableViewCell)
+        let natinf: Natinf
+        if searchController.isActive && searchController.searchBar.text != "" {
+            natinf = _filteredsNatinfArray[indexPath.row]
+            cell.ui_qualification_label.text = String(natinf.natinf) + "- "  +  natinf.qualification
+            
+        } else {
+            let natinf = _natinfsArray [indexPath.row]
+            cell.ui_qualification_label.text = String(natinf.natinf) + "- " +  natinf.qualification
+            
+            
+        }
+        return cell
+        
+        
+        
+        
+      /*  let cell:NatinfTableViewCell! = (tableView.dequeueReusableCell(withIdentifier: "cell") as! NatinfTableViewCell)
         let natinfItem = self._natinfItems[indexPath.row]
         cell.ui_qualification_label.text = natinfItem["QualificationPVe"] as? String
         return cell
+      */
     }
   
 
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
         if segue.identifier == "segueDetailNatinf" {
+            if let cell = sender as? UITableViewCell {
+                if let indexPath = self.tableView.indexPath(for: cell) {
+                    if searchController.isActive {
+                        selectedNatinf = _filteredsNatinfArray[indexPath.row]
+                    } else {
+                        selectedNatinf = _natinfsArray[indexPath.row]
+                    }
+                    
+                    let detailNatinfViewController:DetailNatinfViewController = segue.destination as! DetailNatinfViewController
+                    detailNatinfViewController.natinfNatinf = selectedNatinf
+                }
+               
+            }
+        }
+        
+    /*    if segue.identifier == "segueDetailNatinf" {
             if let cell = sender as? UITableViewCell {
                 if let indexPath = self.tableView.indexPath(for:cell){
                     let selectedNatinf = _natinfItems[indexPath.row]
@@ -85,7 +129,8 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
             }
           
         }
-       
+     */
+    
     }
     
 // MARK: - Module gestion barre de recherche

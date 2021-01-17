@@ -13,10 +13,10 @@ class Natinf {
     var natinf: Int
     var classe: Int
     var montant_amende: Int
-    var montant_amende_minore: Int
+    var montant_amende_minore: String
     var famille: String
    
-    init(qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: Int , famille:String) {
+    init(qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: String , famille:String) {
         self.qualification = qualification
         self.natinf = natinf
         self.classe = classe
