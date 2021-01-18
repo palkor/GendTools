@@ -17,15 +17,17 @@ class DetailNatinfViewController: UIViewController {
     @IBOutlet weak var ui_label_classe: UILabel!
     @IBOutlet weak var ui_label_montant_amende: UILabel!
     @IBOutlet weak var ui_label_montant_amende_minoree: UILabel!
+    @IBOutlet weak var ui_label_famille: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ui_label_qualification.text = natinfNatinf?.qualification
-        ui_label_natinf.text = String(natinfNatinf!.natinf)
-        ui_label_classe.text = String(natinfNatinf!.classe)
-        ui_label_montant_amende.text = String(natinfNatinf!.montant_amende)
-        ui_label_montant_amende_minoree.text = natinfNatinf?.montant_amende_minore
-      
+        ui_label_qualification.text = "Détail de l'infraction : \(natinfNatinf?.qualification.lowercased() ?? "-")"
+        ui_label_natinf.text = "NATINF : \(String(natinfNatinf?.natinf ?? 0))"
+        ui_label_classe.text = "Classe : \(String(natinfNatinf?.classe ?? 0))"
+        ui_label_montant_amende.text = "Montant de l'amende : \(Int(natinfNatinf?.montant_amende ?? 0))"
+        ui_label_montant_amende_minoree.text = "Montant de l'amende minorée : \(natinfNatinf?.montant_amende_minore ?? "sans objet")"
+        ui_label_famille.text = "Famille : \(natinfNatinf?.famille ?? "-")"
+    
     }
     
 }

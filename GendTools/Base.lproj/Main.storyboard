@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Natinf Table View Controller-->
+        <!--Infraction-->
         <scene sceneID="Yee-GB-MeH">
             <objects>
                 <tableViewController id="Z7a-Rw-9DP" customClass="NatinfTableViewController" customModule="GendTools" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,14 +24,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label dddd ccccc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-De-1uF">
-                                            <rect key="frame" x="11" y="0.0" width="340" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label dddd ccccc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-De-1uF">
+                                            <rect key="frame" x="5" y="0.0" width="370" height="43.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="KCQ-De-1uF" secondAttribute="trailing" id="I7u-Md-l9X"/>
+                                        <constraint firstAttribute="bottom" secondItem="KCQ-De-1uF" secondAttribute="bottom" id="Svh-UK-2zh"/>
+                                        <constraint firstItem="KCQ-De-1uF" firstAttribute="top" secondItem="UeX-e7-Ufw" secondAttribute="top" id="aGI-cX-S6F"/>
+                                        <constraint firstItem="KCQ-De-1uF" firstAttribute="leading" secondItem="UeX-e7-Ufw" secondAttribute="leading" constant="5" id="qZ0-NI-hkP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="ui_qualification_label" destination="KCQ-De-1uF" id="PiF-l0-5Tm"/>
@@ -45,7 +50,7 @@
                             <outlet property="delegate" destination="Z7a-Rw-9DP" id="bkT-qz-HrK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7Yg-ca-oxn"/>
+                    <navigationItem key="navigationItem" title="Infraction" id="7Yg-ca-oxn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezW-oa-67s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,9 +70,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelNatinf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypN-9Z-ijT">
-                                <rect key="frame" x="109.5" y="59" width="87.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LabelNatinf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypN-9Z-ijT">
+                                <rect key="frame" x="109.5" y="54" width="109.5" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -99,17 +104,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-bo-ZSq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Famille" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-bo-ZSq">
                                         <rect key="frame" x="0.0" y="376.5" width="345" height="92"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Nafinf  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
-                                <rect key="frame" x="10" y="104.5" width="355" height="50.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="10" y="105.5" width="355" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -119,7 +124,6 @@
                         <constraints>
                             <constraint firstItem="Baw-jF-sUP" firstAttribute="leading" secondItem="0Xm-41-vZE" secondAttribute="leading" constant="15" id="3bG-ap-uGO"/>
                             <constraint firstItem="Baw-jF-sUP" firstAttribute="bottom" secondItem="0Xm-41-vZE" secondAttribute="bottom" constant="5" id="8vD-9C-vtN"/>
-                            <constraint firstItem="ypN-9Z-ijT" firstAttribute="leading" secondItem="Hc8-tZ-xHV" secondAttribute="trailing" constant="28" id="Dbc-8l-MQf"/>
                             <constraint firstItem="0Xm-41-vZE" firstAttribute="trailing" secondItem="Baw-jF-sUP" secondAttribute="trailing" constant="15" id="G5H-Y8-cCK"/>
                             <constraint firstItem="Baw-jF-sUP" firstAttribute="top" secondItem="Hc8-tZ-xHV" secondAttribute="bottom" constant="75" id="IQg-CZ-0t7"/>
                             <constraint firstItem="Hc8-tZ-xHV" firstAttribute="top" secondItem="0Xm-41-vZE" secondAttribute="top" constant="15" id="U8L-Xa-5vw"/>
@@ -133,6 +137,7 @@
                     <navigationItem key="navigationItem" id="gZk-Zj-kcO"/>
                     <connections>
                         <outlet property="ui_label_classe" destination="UyO-Qe-Tsi" id="V1E-JI-jt9"/>
+                        <outlet property="ui_label_famille" destination="mHC-bo-ZSq" id="edF-MX-1sb"/>
                         <outlet property="ui_label_montant_amende" destination="obr-gm-ZHR" id="aNm-jq-MBR"/>
                         <outlet property="ui_label_montant_amende_minoree" destination="zu5-WN-cRm" id="5Ez-c2-vy4"/>
                         <outlet property="ui_label_natinf" destination="ypN-9Z-ijT" id="Ins-3X-YiB"/>
@@ -141,13 +146,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlD-uG-deE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="-1720.3898050974515"/>
+            <point key="canvasLocation" x="689" y="-1720"/>
         </scene>
-        <!--Item 2-->
+        <!--Paramètres-->
         <scene sceneID="k2d-hE-6qF">
             <objects>
                 <navigationController id="MiT-0M-KNe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Ihi-TC-kwD"/>
+                    <tabBarItem key="tabBarItem" title="Paramètres" image="spanner" id="Ihi-TC-kwD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xst-S4-gtm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -169,8 +174,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réglages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaj-Zb-D7M">
-                                <rect key="frame" x="152.5" y="323" width="70.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="131.5" y="91" width="112.5" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5UU-Ro-xUH">
+                                <rect key="frame" x="274" y="179" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recherche par NATINF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9m-E1-gq9">
+                                <rect key="frame" x="16" y="184" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -178,21 +192,30 @@
                         <viewLayoutGuide key="safeArea" id="rLA-Y3-wRI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Aaj-Zb-D7M" firstAttribute="centerY" secondItem="ojH-1j-yv4" secondAttribute="centerY" id="2Pj-aL-BJ7"/>
-                            <constraint firstItem="Aaj-Zb-D7M" firstAttribute="centerX" secondItem="ojH-1j-yv4" secondAttribute="centerX" id="bcs-1l-fsq"/>
+                            <constraint firstItem="5UU-Ro-xUH" firstAttribute="leading" secondItem="Z9m-E1-gq9" secondAttribute="trailing" constant="60" id="BjN-Jv-WiM"/>
+                            <constraint firstItem="Aaj-Zb-D7M" firstAttribute="leading" secondItem="Z9m-E1-gq9" secondAttribute="trailing" constant="-82.5" id="EE8-ej-tA2"/>
+                            <constraint firstItem="5UU-Ro-xUH" firstAttribute="top" secondItem="Aaj-Zb-D7M" secondAttribute="bottom" constant="54" id="Kkc-ge-5Ml"/>
+                            <constraint firstItem="Z9m-E1-gq9" firstAttribute="leading" secondItem="rLA-Y3-wRI" secondAttribute="leading" constant="16" id="apc-CO-Lo5"/>
+                            <constraint firstItem="Z9m-E1-gq9" firstAttribute="top" secondItem="Aaj-Zb-D7M" secondAttribute="bottom" constant="59" id="ePV-zV-242"/>
+                            <constraint firstItem="Aaj-Zb-D7M" firstAttribute="centerX" secondItem="ojH-1j-yv4" secondAttribute="centerX" id="mCI-ku-3U7"/>
+                            <constraint firstItem="rLA-Y3-wRI" firstAttribute="trailing" secondItem="5UU-Ro-xUH" secondAttribute="trailing" constant="52" id="mqK-UC-PDo"/>
+                            <constraint firstItem="Aaj-Zb-D7M" firstAttribute="top" secondItem="rLA-Y3-wRI" secondAttribute="top" constant="47" id="nFU-vX-pfO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YxV-ia-dDy"/>
+                    <connections>
+                        <outlet property="ui_switch_search" destination="5UU-Ro-xUH" id="kD8-z3-OeY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIy-1A-ZXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-925"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-925.18740629685169"/>
         </scene>
-        <!--Item 3-->
+        <!--Calculatrice-->
         <scene sceneID="ge0-f1-EiY">
             <objects>
                 <navigationController id="Lgr-JZ-KIK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 3" id="kgs-BS-HhV"/>
+                    <tabBarItem key="tabBarItem" title="Calculatrice" image="calculator" id="kgs-BS-HhV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ubu-nO-ik5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -233,11 +256,11 @@
             </objects>
             <point key="canvasLocation" x="-2" y="-167"/>
         </scene>
-        <!--Item-->
+        <!--Ethylomètre-->
         <scene sceneID="okt-lN-VQF">
             <objects>
                 <navigationController id="Ivb-Vp-B6x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jeU-zO-VVg"/>
+                    <tabBarItem key="tabBarItem" title="Ethylomètre" image="drink-toast" id="jeU-zO-VVg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qvu-CN-4LJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -278,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="-33" y="609"/>
         </scene>
-        <!--Item 1-->
+        <!--Natinf-->
         <scene sceneID="CbI-Kx-NFW">
             <objects>
                 <navigationController id="DZu-cW-mEy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Upy-RI-5hW"/>
+                    <tabBarItem key="tabBarItem" title="Natinf" image="bookmark" id="Upy-RI-5hW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQq-Xg-ax6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -317,6 +340,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark" width="30" height="30"/>
+        <image name="calculator" width="30" height="30"/>
+        <image name="drink-toast" width="30" height="30"/>
+        <image name="spanner" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

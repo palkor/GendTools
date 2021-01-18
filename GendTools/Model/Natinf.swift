@@ -9,6 +9,7 @@
 import Foundation
 
 class Natinf {
+    var qualificationPVe: String
     var qualification:String
     var natinf: Int
     var classe: Int
@@ -16,7 +17,8 @@ class Natinf {
     var montant_amende_minore: String
     var famille: String
    
-    init(qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: String , famille:String) {
+    init(qualificationPVe: String, qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: String , famille:String) {
+        self.qualificationPVe = qualificationPVe
         self.qualification = qualification
         self.natinf = natinf
         self.classe = classe

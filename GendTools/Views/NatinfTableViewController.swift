@@ -51,7 +51,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         
         for i in 0 ... (_natinfItems.count) - 1 {
             
-            _natinfsArray.append(Natinf(qualification: _natinfItems[i]["QualificationPVe"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String))
+            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String))
           //  montant_amende_minore: _natinfItems[i]["Montant_minore"] as! Strin
         }
         
@@ -77,24 +77,17 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         let natinf: Natinf
         if searchController.isActive && searchController.searchBar.text != "" {
             natinf = _filteredsNatinfArray[indexPath.row]
-            cell.ui_qualification_label.text = String(natinf.natinf) + "- "  +  natinf.qualification
+            cell.ui_qualification_label.text = String(natinf.natinf) + "- "  +  natinf.qualificationPVe + "\n"
             
         } else {
             let natinf = _natinfsArray [indexPath.row]
-            cell.ui_qualification_label.text = String(natinf.natinf) + "- " +  natinf.qualification
+            cell.ui_qualification_label.text = String(natinf.natinf) + "- " +  natinf.qualificationPVe + "\n"
             
             
         }
         return cell
-        
-        
-        
-        
-      /*  let cell:NatinfTableViewCell! = (tableView.dequeueReusableCell(withIdentifier: "cell") as! NatinfTableViewCell)
-        let natinfItem = self._natinfItems[indexPath.row]
-        cell.ui_qualification_label.text = natinfItem["QualificationPVe"] as? String
-        return cell
-      */
+    
+    
     }
   
 
@@ -117,19 +110,6 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
                
             }
         }
-        
-    /*    if segue.identifier == "segueDetailNatinf" {
-            if let cell = sender as? UITableViewCell {
-                if let indexPath = self.tableView.indexPath(for:cell){
-                    let selectedNatinf = _natinfItems[indexPath.row]
-                    let detailViewController: DetailNatinfViewController = segue.destination as! DetailNatinfViewController
-                    detailViewController.natinfSelected = selectedNatinf
-                }
-                
-            }
-          
-        }
-     */
     
     }
     

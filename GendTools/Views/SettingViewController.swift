@@ -8,6 +8,11 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    
+    static let OPTION_SEARCH_NATINF = "OPTION"
+    
+    @IBOutlet weak var ui_switch_search: UISwitch!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
