@@ -16,9 +16,24 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+        
+        
+      
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ui_switch_search.isOn = UserDefaults.standard.bool(forKey: SettingViewController.OPTION_SEARCH_NATINF)
+    }
+    
+    
+    
+    @IBAction func changeSwitchState(_ sender: UISwitch) {
+        
+        UserDefaults.standard.setValue(sender.isOn, forKey: SettingViewController.OPTION_SEARCH_NATINF)
+    }
+    
     
 
     /*

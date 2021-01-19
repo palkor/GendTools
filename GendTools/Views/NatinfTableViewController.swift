@@ -15,6 +15,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
     var _filteredsNatinfArray = [Natinf]() // tableau résultats searchBar
     var selectedNatinf:Natinf?
     let searchController = UISearchController(searchResultsController: nil) // barre de recherche
+    var state:Bool = false // variable état bouton recherche texte/natinf
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +52,15 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         
         for i in 0 ... (_natinfItems.count) - 1 {
             
-            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String))
-          //  montant_amende_minore: _natinfItems[i]["Montant_minore"] as! Strin
+            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String, retrait_de_point: _natinfItems[i]["Retrait_points"] as? Int ?? 0))
+       
         }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        state = UserDefaults.standard.bool(forKey: SettingViewController.OPTION_SEARCH_NATINF)
         
     }
 
@@ -123,12 +130,25 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
     }
     
     func filteredNatinfFromSearchBar(for searchText:String)   {
+        
+        if state == false {
+        
         _filteredsNatinfArray = _natinfsArray.filter({ (natinf:Natinf) -> Bool in
-            return
-                natinf.qualification.lowercased().contains(searchText.lowercased())
+                return
+            natinf.qualification.lowercased().contains(searchText.lowercased())
+           
         })
+        
+        } else {
+            _filteredsNatinfArray = _natinfsArray.filter({ (natinf:Natinf) -> Bool in
+                    return
+                String(natinf.natinf).contains(searchText)
+               
+            })
+        }
         tableView.reloadData()
-    }
     
+    }
+
     
 }

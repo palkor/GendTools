@@ -70,54 +70,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LabelNatinf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypN-9Z-ijT">
-                                <rect key="frame" x="109.5" y="54" width="109.5" height="26.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-jF-sUP">
                                 <rect key="frame" x="15" y="144.5" width="345" height="468.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Detail Nafinf  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Classe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyO-Qe-Tsi">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="92"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="345" height="76.5"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Montant Amende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obr-gm-ZHR">
-                                        <rect key="frame" x="0.0" y="94" width="345" height="92"/>
+                                        <rect key="frame" x="0.0" y="157" width="345" height="76.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Montant amende minorée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-WN-cRm">
-                                        <rect key="frame" x="0.0" y="188" width="345" height="92.5"/>
+                                        <rect key="frame" x="0.0" y="235.5" width="345" height="76"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Retrait de point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWy-hb-V3Q">
-                                        <rect key="frame" x="0.0" y="282.5" width="345" height="92"/>
+                                        <rect key="frame" x="0.0" y="313.5" width="345" height="76.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Famille" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-bo-ZSq">
-                                        <rect key="frame" x="0.0" y="376.5" width="345" height="92"/>
+                                        <rect key="frame" x="0.0" y="392" width="345" height="76.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Nafinf  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
-                                <rect key="frame" x="10" y="105.5" width="355" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Xm-41-vZE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,11 +121,7 @@
                             <constraint firstItem="0Xm-41-vZE" firstAttribute="trailing" secondItem="Baw-jF-sUP" secondAttribute="trailing" constant="15" id="G5H-Y8-cCK"/>
                             <constraint firstItem="Baw-jF-sUP" firstAttribute="top" secondItem="Hc8-tZ-xHV" secondAttribute="bottom" constant="75" id="IQg-CZ-0t7"/>
                             <constraint firstItem="Hc8-tZ-xHV" firstAttribute="top" secondItem="0Xm-41-vZE" secondAttribute="top" constant="15" id="U8L-Xa-5vw"/>
-                            <constraint firstItem="N6t-Hh-4CG" firstAttribute="leading" secondItem="0Xm-41-vZE" secondAttribute="leading" constant="10" id="WPy-q7-g0o"/>
-                            <constraint firstItem="0Xm-41-vZE" firstAttribute="trailing" secondItem="N6t-Hh-4CG" secondAttribute="trailing" constant="10" id="Yzy-Gq-Ej7"/>
                             <constraint firstItem="Hc8-tZ-xHV" firstAttribute="leading" secondItem="0Xm-41-vZE" secondAttribute="leading" constant="10" id="ZVs-yg-0zm"/>
-                            <constraint firstItem="ypN-9Z-ijT" firstAttribute="firstBaseline" secondItem="Hc8-tZ-xHV" secondAttribute="firstBaseline" id="vuH-mR-JoK"/>
-                            <constraint firstItem="N6t-Hh-4CG" firstAttribute="top" secondItem="ypN-9Z-ijT" secondAttribute="bottom" constant="25" id="yE8-fw-Nl4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZk-Zj-kcO"/>
@@ -140,8 +130,9 @@
                         <outlet property="ui_label_famille" destination="mHC-bo-ZSq" id="edF-MX-1sb"/>
                         <outlet property="ui_label_montant_amende" destination="obr-gm-ZHR" id="aNm-jq-MBR"/>
                         <outlet property="ui_label_montant_amende_minoree" destination="zu5-WN-cRm" id="5Ez-c2-vy4"/>
-                        <outlet property="ui_label_natinf" destination="ypN-9Z-ijT" id="Ins-3X-YiB"/>
+                        <outlet property="ui_label_natinf" destination="Hc8-tZ-xHV" id="aPt-2V-acP"/>
                         <outlet property="ui_label_qualification" destination="N6t-Hh-4CG" id="eiP-Vk-Ayh"/>
+                        <outlet property="ui_label_retrait_point" destination="fWy-hb-V3Q" id="b1f-x0-zUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlD-uG-deE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -181,6 +172,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5UU-Ro-xUH">
                                 <rect key="frame" x="274" y="179" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeSwitchState:" destination="fQj-ir-ztj" eventType="valueChanged" id="5SD-e8-rUm"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recherche par NATINF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9m-E1-gq9">
                                 <rect key="frame" x="16" y="184" width="198" height="21"/>
