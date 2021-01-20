@@ -19,6 +19,9 @@ class DetailNatinfViewController: UIViewController {
     @IBOutlet weak var ui_label_montant_amende_minoree: UILabel!
     @IBOutlet weak var ui_label_retrait_point: UILabel!
     @IBOutlet weak var ui_label_famille: UILabel!
+    @IBOutlet weak var ui_label_prevu: UILabel!
+    @IBOutlet weak var ui_label_reprime: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,8 @@ class DetailNatinfViewController: UIViewController {
         ui_label_montant_amende_minoree.text = "Montant de l'amende minorée : \(natinfNatinf?.montant_amende_minore ?? "sans objet")"
         ui_label_famille.text = "Famille : \(natinfNatinf?.famille ?? "-")"
         ui_label_retrait_point.text = "Retraite de point : \(natinfNatinf?.retrait_de_point ?? 0)"
+        ui_label_prevu.text = "Infraction prévue par : \(natinfNatinf?.infraction_prevu ?? "")"
+        ui_label_reprime.text = "Infraction réprimée par : \(natinfNatinf?.infraction_reprime ?? "")"
     
     }
     

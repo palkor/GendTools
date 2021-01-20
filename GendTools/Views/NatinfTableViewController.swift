@@ -52,7 +52,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         
         for i in 0 ... (_natinfItems.count) - 1 {
             
-            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String, retrait_de_point: _natinfItems[i]["Retrait_points"] as? Int ?? 0))
+            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String, retrait_de_point: _natinfItems[i]["Retrait_points"] as? Int ?? 0, infraction_prevu: (_natinfItems[i]["Prevu"] as? String)!, infraction_reprime: _natinfItems[i]["Reprime"] as! String))
        
         }
         

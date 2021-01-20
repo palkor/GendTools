@@ -64,49 +64,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NATINF : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc8-tZ-xHV">
-                                <rect key="frame" x="10" y="59" width="71.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-jF-sUP">
-                                <rect key="frame" x="15" y="144.5" width="345" height="468.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-jF-sUP">
+                                <rect key="frame" x="5" y="71" width="365" height="525"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Detail Nafinf  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="76.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATINF : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc8-tZ-xHV">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Classe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyO-Qe-Tsi">
-                                        <rect key="frame" x="0.0" y="78.5" width="345" height="76.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Nafinf   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
+                                        <rect key="frame" x="0.0" y="46" width="365" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prévu  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPb-55-Drd">
+                                        <rect key="frame" x="0.0" y="141" width="365" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réprimé  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0X-Rl-EPQ">
+                                        <rect key="frame" x="0.0" y="223" width="365" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyO-Qe-Tsi">
+                                        <rect key="frame" x="0.0" y="305" width="365" height="18"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Montant Amende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obr-gm-ZHR">
-                                        <rect key="frame" x="0.0" y="157" width="345" height="76.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant Amende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obr-gm-ZHR">
+                                        <rect key="frame" x="0.0" y="351" width="365" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Montant amende minorée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-WN-cRm">
-                                        <rect key="frame" x="0.0" y="235.5" width="345" height="76"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant amende minorée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-WN-cRm">
+                                        <rect key="frame" x="0.0" y="397" width="365" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Retrait de point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWy-hb-V3Q">
-                                        <rect key="frame" x="0.0" y="313.5" width="345" height="76.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrait de point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWy-hb-V3Q">
+                                        <rect key="frame" x="0.0" y="443" width="365" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Famille" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-bo-ZSq">
-                                        <rect key="frame" x="0.0" y="392" width="345" height="76.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Famille " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-bo-ZSq">
+                                        <rect key="frame" x="0.0" y="489" width="365" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -116,12 +128,9 @@
                         <viewLayoutGuide key="safeArea" id="0Xm-41-vZE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Baw-jF-sUP" firstAttribute="leading" secondItem="0Xm-41-vZE" secondAttribute="leading" constant="15" id="3bG-ap-uGO"/>
-                            <constraint firstItem="Baw-jF-sUP" firstAttribute="bottom" secondItem="0Xm-41-vZE" secondAttribute="bottom" constant="5" id="8vD-9C-vtN"/>
-                            <constraint firstItem="0Xm-41-vZE" firstAttribute="trailing" secondItem="Baw-jF-sUP" secondAttribute="trailing" constant="15" id="G5H-Y8-cCK"/>
-                            <constraint firstItem="Baw-jF-sUP" firstAttribute="top" secondItem="Hc8-tZ-xHV" secondAttribute="bottom" constant="75" id="IQg-CZ-0t7"/>
-                            <constraint firstItem="Hc8-tZ-xHV" firstAttribute="top" secondItem="0Xm-41-vZE" secondAttribute="top" constant="15" id="U8L-Xa-5vw"/>
-                            <constraint firstItem="Hc8-tZ-xHV" firstAttribute="leading" secondItem="0Xm-41-vZE" secondAttribute="leading" constant="10" id="ZVs-yg-0zm"/>
+                            <constraint firstItem="Baw-jF-sUP" firstAttribute="centerY" secondItem="Mh3-Kn-LYf" secondAttribute="centerY" id="mdd-ma-jaI"/>
+                            <constraint firstItem="Baw-jF-sUP" firstAttribute="leading" secondItem="0Xm-41-vZE" secondAttribute="leading" constant="5" id="pjg-lA-lMK"/>
+                            <constraint firstItem="0Xm-41-vZE" firstAttribute="trailing" secondItem="Baw-jF-sUP" secondAttribute="trailing" constant="5" id="wGX-4W-gp7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZk-Zj-kcO"/>
@@ -131,19 +140,21 @@
                         <outlet property="ui_label_montant_amende" destination="obr-gm-ZHR" id="aNm-jq-MBR"/>
                         <outlet property="ui_label_montant_amende_minoree" destination="zu5-WN-cRm" id="5Ez-c2-vy4"/>
                         <outlet property="ui_label_natinf" destination="Hc8-tZ-xHV" id="aPt-2V-acP"/>
+                        <outlet property="ui_label_prevu" destination="aPb-55-Drd" id="iHG-Uj-65Z"/>
                         <outlet property="ui_label_qualification" destination="N6t-Hh-4CG" id="eiP-Vk-Ayh"/>
+                        <outlet property="ui_label_reprime" destination="Y0X-Rl-EPQ" id="PZU-QX-qNQ"/>
                         <outlet property="ui_label_retrait_point" destination="fWy-hb-V3Q" id="b1f-x0-zUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlD-uG-deE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="-1720"/>
+            <point key="canvasLocation" x="688.79999999999995" y="-1720.3898050974515"/>
         </scene>
         <!--Paramètres-->
         <scene sceneID="k2d-hE-6qF">
             <objects>
                 <navigationController id="MiT-0M-KNe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Paramètres" image="spanner" id="Ihi-TC-kwD"/>
+                    <tabBarItem key="tabBarItem" title="Paramètres" image="icons8-paramètres-30" id="Ihi-TC-kwD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xst-S4-gtm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -337,7 +348,7 @@
         <image name="bookmark" width="30" height="30"/>
         <image name="calculator" width="30" height="30"/>
         <image name="drink-toast" width="30" height="30"/>
-        <image name="spanner" width="30" height="30"/>
+        <image name="icons8-paramètres-30" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
