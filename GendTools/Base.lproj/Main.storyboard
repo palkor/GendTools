@@ -70,7 +70,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATINF : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc8-tZ-xHV">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Nafinf   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
@@ -167,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="-865" y="-925"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Réglages-->
         <scene sceneID="TAY-iX-kv7">
             <objects>
                 <viewController id="fQj-ir-ztj" customClass="SettingViewController" customModule="GendTools" customModuleProvider="target" sceneMemberID="viewController">
@@ -207,7 +207,7 @@
                             <constraint firstItem="Aaj-Zb-D7M" firstAttribute="top" secondItem="rLA-Y3-wRI" secondAttribute="top" constant="47" id="nFU-vX-pfO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YxV-ia-dDy"/>
+                    <navigationItem key="navigationItem" title="Réglages" id="YxV-ia-dDy"/>
                     <connections>
                         <outlet property="ui_switch_search" destination="5UU-Ro-xUH" id="kD8-z3-OeY"/>
                     </connections>
@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="-852" y="-157"/>
         </scene>
-        <!--Speed View Controller-->
+        <!--Calculette vitesse-->
         <scene sceneID="ZbB-wF-LcU">
             <objects>
                 <viewController id="nDx-d1-qkb" customClass="SpeedViewController" customModule="GendTools" customModuleProvider="target" sceneMemberID="viewController">
@@ -241,8 +241,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculette" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iye-Bj-C3i">
-                                <rect key="frame" x="149" y="323.5" width="77" height="20.5"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-Bo-gcf">
+                                <rect key="frame" x="41" y="82" width="293" height="32"/>
+                                <segments>
+                                    <segment title="30"/>
+                                    <segment title="50"/>
+                                    <segment title="70"/>
+                                    <segment title="80"/>
+                                    <segment title="90"/>
+                                    <segment title="110"/>
+                                    <segment title="130"/>
+                                </segments>
+                                <connections>
+                                    <action selector="actionChangeSegmentedControl:" destination="nDx-d1-qkb" eventType="valueChanged" id="rr2-qF-H1O"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse limite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-UZ-TSq">
+                                <rect key="frame" x="137" y="134" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse retenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-Ks-NAy">
+                                <rect key="frame" x="119" y="323" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vitesse enregistrée" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-4f-VCE">
+                                <rect key="frame" x="111.5" y="230" width="152" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nDx-d1-qkb" id="Set-cG-Vpe"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrait de point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d06-x2-bbm">
+                                <rect key="frame" x="129" y="420" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -251,15 +286,33 @@
                         <viewLayoutGuide key="safeArea" id="lf0-Dx-Glh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iye-Bj-C3i" firstAttribute="centerY" secondItem="62E-lr-SIO" secondAttribute="centerY" id="GuP-3s-xC4"/>
-                            <constraint firstItem="iye-Bj-C3i" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" id="wgg-8R-d1p"/>
+                            <constraint firstItem="vyg-4f-VCE" firstAttribute="top" secondItem="Pij-Bo-gcf" secondAttribute="bottom" constant="117" id="FDi-Ca-1Qn"/>
+                            <constraint firstItem="ajU-UZ-TSq" firstAttribute="top" secondItem="Pij-Bo-gcf" secondAttribute="bottom" constant="21" id="HaD-oC-wQn"/>
+                            <constraint firstItem="vyg-4f-VCE" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" id="Pr2-rD-fbb"/>
+                            <constraint firstItem="Pij-Bo-gcf" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" id="RX4-XC-x9k"/>
+                            <constraint firstItem="Pij-Bo-gcf" firstAttribute="top" secondItem="lf0-Dx-Glh" secondAttribute="top" constant="38" id="SCu-Yl-cJ0"/>
+                            <constraint firstItem="Fhh-Ks-NAy" firstAttribute="leading" secondItem="Pij-Bo-gcf" secondAttribute="trailing" constant="-215" id="Yys-lF-3cs"/>
+                            <constraint firstItem="ajU-UZ-TSq" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" id="fHd-2w-0Tf"/>
+                            <constraint firstItem="Fhh-Ks-NAy" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" constant="7.5" id="gTC-EF-7fQ"/>
+                            <constraint firstItem="vyg-4f-VCE" firstAttribute="leading" secondItem="lf0-Dx-Glh" secondAttribute="leading" constant="111.5" id="i7L-Eu-OXm"/>
+                            <constraint firstItem="vyg-4f-VCE" firstAttribute="leading" secondItem="Pij-Bo-gcf" secondAttribute="trailing" constant="-222.5" id="jjW-pu-FvP"/>
+                            <constraint firstItem="d06-x2-bbm" firstAttribute="top" secondItem="Pij-Bo-gcf" secondAttribute="bottom" constant="307" id="uZh-az-qyb"/>
+                            <constraint firstItem="d06-x2-bbm" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" id="vsW-IO-f03"/>
+                            <constraint firstItem="Fhh-Ks-NAy" firstAttribute="top" secondItem="Pij-Bo-gcf" secondAttribute="bottom" constant="210" id="yRa-qY-tp0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LvE-iN-0QB"/>
+                    <navigationItem key="navigationItem" title="Calculette vitesse" id="LvE-iN-0QB"/>
+                    <connections>
+                        <outlet property="ui_label_Speed" destination="Fhh-Ks-NAy" id="MFt-BT-jpI"/>
+                        <outlet property="ui_label_points" destination="d06-x2-bbm" id="Wb3-dZ-4Ne"/>
+                        <outlet property="ui_label_vitesse" destination="ajU-UZ-TSq" id="D5G-As-H9Y"/>
+                        <outlet property="ui_segment_select_speed" destination="Pij-Bo-gcf" id="n5d-a1-COa"/>
+                        <outlet property="ui_textField_speed" destination="vyg-4f-VCE" id="JJM-Qk-BaV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADI-ql-5Um" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-167"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-158.77061469265368"/>
         </scene>
         <!--Ethylomètre-->
         <scene sceneID="okt-lN-VQF">
@@ -351,6 +404,9 @@
         <image name="icons8-paramètres-30" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

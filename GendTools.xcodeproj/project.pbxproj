@@ -21,6 +21,7 @@
 		50C77F0625AA6803000204B3 /* natinfdb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50C77F0525AA6803000204B3 /* natinfdb.plist */; };
 		50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */; };
 		50DD166B25B35FEA007D399B /* Natinf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD166A25B35FEA007D399B /* Natinf.swift */; };
+		50DF943A25B9F1450036865C /* SpeedCompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DF943925B9F1450036865C /* SpeedCompute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		50C77F0525AA6803000204B3 /* natinfdb.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = natinfdb.plist; sourceTree = "<group>"; };
 		50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatinfTableViewCell.swift; sourceTree = "<group>"; };
 		50DD166A25B35FEA007D399B /* Natinf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Natinf.swift; sourceTree = "<group>"; };
+		50DF943925B9F1450036865C /* SpeedCompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCompute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				50DD166A25B35FEA007D399B /* Natinf.swift */,
+				50DF943925B9F1450036865C /* SpeedCompute.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				505BED5D25AA53F6000EE460 /* AppDelegate.swift in Sources */,
 				50C77F0225AA6193000204B3 /* EthyloViewController.swift in Sources */,
+				50DF943A25B9F1450036865C /* SpeedCompute.swift in Sources */,
 				505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */,
 				50DD166B25B35FEA007D399B /* Natinf.swift in Sources */,
 				50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */,
