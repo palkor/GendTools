@@ -8,8 +8,8 @@
 import UIKit
 
 class NatinfTableViewController: UITableViewController, UISearchResultsUpdating {
-   
-    
+    static let COLOR_NAV:UIColor = UIColor(named: "Green")!
+        
     var _natinfItems = [[String:Any]]() // Tableau de dictionnaires du fichier PLIST
     var _natinfsArray = [Natinf]()  // tableau avec objets NATINF
     var _filteredsNatinfArray = [Natinf]() // tableau résultats searchBar
@@ -20,12 +20,21 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
     override func viewDidLoad() {
         super.viewDidLoad()
        
+    // MARK: - Paramétrage aspect du navigation controller
+        self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
+        self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
+        
+        
     // MARK: - Paramètrage de la barre de recherche
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Recherche d'infraction"
+        searchController.searchBar.barTintColor = UIColor.systemGreen
+        searchController.searchBar.backgroundColor = UIColor.systemGreen
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
+      
 
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.

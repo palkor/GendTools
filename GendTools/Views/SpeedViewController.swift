@@ -8,10 +8,13 @@
 import UIKit
 
 class SpeedViewController: UIViewController, UITextFieldDelegate {
-
-    var vitesseRetenue: Int = 30
+    
+    let OPTION_SAVE_SPEED = "SPEED"
+    
+    var vitesseRetenue: Int = 0 // vitesse retenue
     var retraitDePoint:Int = 0
     var vitesseLimit:Int = 0
+    var index:Int = 0
     
     @IBOutlet weak var ui_segment_select_speed: UISegmentedControl!
     @IBOutlet weak var ui_textField_speed: UITextField!
@@ -20,11 +23,45 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ui_label_vitesse: UILabel!
    
     override func viewDidLoad() {
-    
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
+        self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
+        
+        vitesseLimit = UserDefaults.standard.integer(forKey: OPTION_SAVE_SPEED)
+        switch vitesseLimit {
+        case 30:
+            index = 0
+        case 50:
+            index = 1
+        case 70:
+            index = 3
+        case 80:
+            index = 4
+        case 90:
+            index = 5
+        case 110:
+            index = 6
+        case 130:
+            index = 7
+        default:
+            index = 8
+        }
+        
+        ui_segment_select_speed.selectedSegmentIndex = index
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        ui_label_Speed.text = "Vitesse retenue : "
+        ui_label_points.text = "Retrait de point : "
+        
+    }
+
+    // MARK: - Selection de la limitation de vitesse
     
     @IBAction func actionChangeSegmentedControl(_ sender: UISegmentedControl) {
+        
         switch ui_segment_select_speed.selectedSegmentIndex {
         case 0:
             vitesseLimit = 30
@@ -43,22 +80,52 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
         default:
             vitesseLimit = 0
         }
-        ui_label_vitesse.text = "Vitesse limitée à : \(vitesseLimit)"
+        ui_label_vitesse.text = "Vitesse limitée à : \(vitesseLimit )"
+        UserDefaults.standard.setValue(vitesseLimit, forKey: OPTION_SAVE_SPEED)
         
     }
     
     
-    
+    // MARK: -  calcul de la vitesse retenue par rapport à la vitesse saisie
+   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
         if let vitesse = ui_textField_speed.text {
-            let speed = Speed(vitesseEnregistree: Int(vitesse) ?? 0, vitesseLimite: vitesseLimit)
-        vitesseRetenue = speed.vitesseRetenue
-            retraitDePoint = speed.retrait_Point
-        computeSpeedAndPoint()
-        }
-        return false
+        let speed = Speed(vitesseEnregistree: Int(vitesse) ?? 0, vitesseLimite: vitesseLimit)
+            if speed.vitesseEnregistree != 0 {
+                vitesseRetenue = speed.vitesseRetenue
+                retraitDePoint = speed.retrait_Point
+                computeSpeedAndPoint()
+                
+                } else {
+                let alert = UIAlertController(title: "Erreur", message: "Veuillez entrer un nombre", preferredStyle: .alert)
+                let alertAcyion = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(alertAcyion)
+                present(alert, animated: true, completion: nil)
+                }
+                        
+            }
+        return true
         
+        }
+        
+  
+    
+    
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let caractere = CharacterSet.decimalDigits
+        let caractereInterdit = caractere.inverted
+        let position = string.rangeOfCharacter(from: caractereInterdit)
+        if position != nil {
+            return false
+        }
+        
+        return true
     }
+    
+    // MARK: - calcul du nombre de point à retirer
     
     func computeSpeedAndPoint() {
         

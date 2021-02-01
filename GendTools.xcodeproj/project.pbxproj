@@ -12,7 +12,7 @@
 		505BED6425AA53F6000EE460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505BED6225AA53F6000EE460 /* Main.storyboard */; };
 		505BED6625AA53FA000EE460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505BED6525AA53FA000EE460 /* Assets.xcassets */; };
 		505BED6925AA53FA000EE460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505BED6725AA53FA000EE460 /* LaunchScreen.storyboard */; };
-		505BED7325AA5501000EE460 /* MainTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7225AA5501000EE460 /* MainTabBarControllerViewController.swift */; };
+		505BED7325AA5501000EE460 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7225AA5501000EE460 /* MainTabBarController.swift */; };
 		505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */; };
 		505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */; };
 		505BED8025AA5CF0000EE460 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7F25AA5CF0000EE460 /* SettingViewController.swift */; };
@@ -32,7 +32,7 @@
 		505BED6525AA53FA000EE460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		505BED6825AA53FA000EE460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505BED6A25AA53FA000EE460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		505BED7225AA5501000EE460 /* MainTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		505BED7225AA5501000EE460 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatinfTableViewController.swift; sourceTree = "<group>"; };
 		505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		505BED7F25AA5CF0000EE460 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 				505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */,
 				50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */,
 				505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */,
-				505BED7225AA5501000EE460 /* MainTabBarControllerViewController.swift */,
+				505BED7225AA5501000EE460 /* MainTabBarController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */,
 				50C77EFF25AA615D000204B3 /* DetailNatinfViewController.swift in Sources */,
 				505BED5F25AA53F6000EE460 /* SceneDelegate.swift in Sources */,
-				505BED7325AA5501000EE460 /* MainTabBarControllerViewController.swift in Sources */,
+				505BED7325AA5501000EE460 /* MainTabBarController.swift in Sources */,
 				505BED8025AA5CF0000EE460 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,13 +51,15 @@
                             <outlet property="delegate" destination="Z7a-Rw-9DP" id="bkT-qz-HrK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Infraction" id="7Yg-ca-oxn"/>
+                    <navigationItem key="navigationItem" title="Infraction" id="7Yg-ca-oxn">
+                        <barButtonItem key="backBarButtonItem" title="  " id="xit-PI-p2P"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezW-oa-67s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="-1720.3898050974515"/>
         </scene>
-        <!--Detail Natinf View Controller-->
+        <!--Détail infraction-->
         <scene sceneID="Fwx-MA-ztC">
             <objects>
                 <viewController id="Tzp-Mi-iyU" customClass="DetailNatinfViewController" customModule="GendTools" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,7 +136,7 @@
                             <constraint firstItem="0Xm-41-vZE" firstAttribute="trailing" secondItem="Baw-jF-sUP" secondAttribute="trailing" constant="5" id="wGX-4W-gp7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gZk-Zj-kcO"/>
+                    <navigationItem key="navigationItem" title="Détail infraction" id="IQb-X5-Vkn"/>
                     <connections>
                         <outlet property="ui_label_classe" destination="UyO-Qe-Tsi" id="V1E-JI-jt9"/>
                         <outlet property="ui_label_famille" destination="mHC-bo-ZSq" id="edF-MX-1sb"/>
@@ -150,14 +153,18 @@
             </objects>
             <point key="canvasLocation" x="688.79999999999995" y="-1720.3898050974515"/>
         </scene>
-        <!--Paramètres-->
+        <!--Réglages-->
         <scene sceneID="k2d-hE-6qF">
             <objects>
                 <navigationController id="MiT-0M-KNe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Paramètres" image="icons8-paramètres-30" id="Ihi-TC-kwD"/>
+                    <tabBarItem key="tabBarItem" title="Réglages" image="spanner-7" id="Ihi-TC-kwD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xst-S4-gtm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="fQj-ir-ztj" kind="relationship" relationship="rootViewController" id="IoV-Pl-1bo"/>
@@ -183,6 +190,7 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5UU-Ro-xUH">
                                 <rect key="frame" x="274" y="179" width="51" height="31"/>
+                                <color key="thumbTintColor" name="AccentColor"/>
                                 <connections>
                                     <action selector="changeSwitchState:" destination="fQj-ir-ztj" eventType="valueChanged" id="5SD-e8-rUm"/>
                                 </connections>
@@ -216,14 +224,18 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="-925.18740629685169"/>
         </scene>
-        <!--Calculatrice-->
+        <!--Vitesse-->
         <scene sceneID="ge0-f1-EiY">
             <objects>
                 <navigationController id="Lgr-JZ-KIK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calculatrice" image="calculator" id="kgs-BS-HhV"/>
+                    <tabBarItem key="tabBarItem" title="Vitesse" image="car-side-7" id="kgs-BS-HhV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ubu-nO-ik5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="nDx-d1-qkb" kind="relationship" relationship="rootViewController" id="skG-5W-jnk"/>
@@ -233,7 +245,7 @@
             </objects>
             <point key="canvasLocation" x="-852" y="-157"/>
         </scene>
-        <!--Calculette vitesse-->
+        <!--Calcul vitesse-->
         <scene sceneID="ZbB-wF-LcU">
             <objects>
                 <viewController id="nDx-d1-qkb" customClass="SpeedViewController" customModule="GendTools" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,6 +255,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-Bo-gcf">
                                 <rect key="frame" x="41" y="82" width="293" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <segments>
                                     <segment title="30"/>
                                     <segment title="50"/>
@@ -263,15 +276,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse retenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-Ks-NAy">
-                                <rect key="frame" x="119" y="323" width="152" height="21"/>
+                                <rect key="frame" x="119" y="323" width="181" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vitesse enregistrée" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-4f-VCE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vitesse relevée" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-4f-VCE">
                                 <rect key="frame" x="111.5" y="230" width="152" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="nDx-d1-qkb" id="Set-cG-Vpe"/>
                                 </connections>
@@ -293,7 +307,7 @@
                             <constraint firstItem="Pij-Bo-gcf" firstAttribute="top" secondItem="lf0-Dx-Glh" secondAttribute="top" constant="38" id="SCu-Yl-cJ0"/>
                             <constraint firstItem="Fhh-Ks-NAy" firstAttribute="leading" secondItem="Pij-Bo-gcf" secondAttribute="trailing" constant="-215" id="Yys-lF-3cs"/>
                             <constraint firstItem="ajU-UZ-TSq" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" id="fHd-2w-0Tf"/>
-                            <constraint firstItem="Fhh-Ks-NAy" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" constant="7.5" id="gTC-EF-7fQ"/>
+                            <constraint firstItem="Fhh-Ks-NAy" firstAttribute="centerX" secondItem="62E-lr-SIO" secondAttribute="centerX" constant="22" id="gTC-EF-7fQ"/>
                             <constraint firstItem="vyg-4f-VCE" firstAttribute="leading" secondItem="lf0-Dx-Glh" secondAttribute="leading" constant="111.5" id="i7L-Eu-OXm"/>
                             <constraint firstItem="vyg-4f-VCE" firstAttribute="leading" secondItem="Pij-Bo-gcf" secondAttribute="trailing" constant="-222.5" id="jjW-pu-FvP"/>
                             <constraint firstItem="d06-x2-bbm" firstAttribute="top" secondItem="Pij-Bo-gcf" secondAttribute="bottom" constant="307" id="uZh-az-qyb"/>
@@ -301,7 +315,7 @@
                             <constraint firstItem="Fhh-Ks-NAy" firstAttribute="top" secondItem="Pij-Bo-gcf" secondAttribute="bottom" constant="210" id="yRa-qY-tp0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Calculette vitesse" id="LvE-iN-0QB"/>
+                    <navigationItem key="navigationItem" title="Calcul vitesse" id="FRQ-NZ-Gtv"/>
                     <connections>
                         <outlet property="ui_label_Speed" destination="Fhh-Ks-NAy" id="MFt-BT-jpI"/>
                         <outlet property="ui_label_points" destination="d06-x2-bbm" id="Wb3-dZ-4Ne"/>
@@ -318,10 +332,13 @@
         <scene sceneID="okt-lN-VQF">
             <objects>
                 <navigationController id="Ivb-Vp-B6x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ethylomètre" image="drink-toast" id="jeU-zO-VVg"/>
+                    <tabBarItem key="tabBarItem" title="Ethylomètre" image="percent-decor-7" id="jeU-zO-VVg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qvu-CN-4LJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Wpe-9d-MK2" kind="relationship" relationship="rootViewController" id="fxt-LZ-09j"/>
@@ -331,10 +348,10 @@
             </objects>
             <point key="canvasLocation" x="-866" y="610"/>
         </scene>
-        <!--View Controller-->
+        <!--Taux éthylomètre-->
         <scene sceneID="KPB-CG-edy">
             <objects>
-                <viewController id="Wpe-9d-MK2" sceneMemberID="viewController">
+                <viewController id="Wpe-9d-MK2" customClass="EthyloViewController" customModule="GendTools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q8Q-DG-XbR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,7 +370,7 @@
                             <constraint firstItem="WrL-QE-5xG" firstAttribute="centerY" secondItem="Q8Q-DG-XbR" secondAttribute="centerY" id="Sfk-Yx-e6i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nY3-8c-bxa"/>
+                    <navigationItem key="navigationItem" title="Taux éthylomètre" id="nY3-8c-bxa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2c9-dt-Rmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,10 +380,15 @@
         <scene sceneID="CbI-Kx-NFW">
             <objects>
                 <navigationController id="DZu-cW-mEy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Natinf" image="bookmark" id="Upy-RI-5hW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQq-Xg-ax6">
+                    <tabBarItem key="tabBarItem" title="Natinf" image="book-simple-7" id="Upy-RI-5hW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Arrow-Left" backIndicatorTransitionMaskImage="Arrow-Left" id="wQq-Xg-ax6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Z7a-Rw-9DP" kind="relationship" relationship="rootViewController" id="td7-8m-PAX"/>
@@ -383,7 +405,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zfc-eo-0lM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGray4Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="DZu-cW-mEy" kind="relationship" relationship="viewControllers" id="9Z8-OW-YkD"/>
@@ -398,12 +420,25 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" width="30" height="30"/>
-        <image name="calculator" width="30" height="30"/>
-        <image name="drink-toast" width="30" height="30"/>
-        <image name="icons8-paramètres-30" width="30" height="30"/>
+        <image name="Arrow-Left" width="28" height="28"/>
+        <image name="book-simple-7" width="26" height="22"/>
+        <image name="car-side-7" width="27" height="15"/>
+        <image name="percent-decor-7" width="29" height="29"/>
+        <image name="spanner-7" width="28" height="28"/>
+        <namedColor name="AccentColor">
+            <color red="0.15399999916553497" green="0.51099997758865356" blue="0.24500000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
