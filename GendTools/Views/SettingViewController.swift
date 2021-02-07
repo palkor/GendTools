@@ -13,13 +13,14 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var ui_switch_search: UISwitch!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
         self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view/remove file
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,15 +33,4 @@ class SettingViewController: UIViewController {
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

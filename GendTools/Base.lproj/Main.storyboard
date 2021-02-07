@@ -19,15 +19,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ySp-yO-W9r" customClass="NatinfTableViewCell" customModule="GendTools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="47.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ySp-yO-W9r" id="UeX-e7-Ufw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label dddd ccccc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-De-1uF">
-                                            <rect key="frame" x="5" y="0.0" width="370" height="43.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <rect key="frame" x="5" y="0.0" width="370" height="47.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -70,7 +70,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-jF-sUP">
                                 <rect key="frame" x="5" y="71" width="365" height="525"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATINF : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc8-tZ-xHV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATINF : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc8-tZ-xHV">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -285,7 +285,7 @@
                                 <rect key="frame" x="111.5" y="230" width="152" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="nDx-d1-qkb" id="Set-cG-Vpe"/>
                                 </connections>
@@ -332,11 +332,12 @@
         <scene sceneID="okt-lN-VQF">
             <objects>
                 <navigationController id="Ivb-Vp-B6x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ethylomètre" image="percent-decor-7" id="jeU-zO-VVg"/>
+                    <tabBarItem key="tabBarItem" title="Ethylomètre" image="drink-toast" id="jeU-zO-VVg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qvu-CN-4LJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -356,8 +357,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethylo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrL-QE-5xG">
-                                <rect key="frame" x="164" y="323.5" width="47" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux affiché par l'éthylomètre en mg/litre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrL-QE-5xG">
+                                <rect key="frame" x="32" y="75" width="311" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taux en mg/litre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-bW-Y2d">
+                                <rect key="frame" x="122" y="145" width="131" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Wpe-9d-MK2" id="QF7-RH-4E2"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux retenu :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn4-tW-ANw">
+                                <rect key="frame" x="38" y="249" width="299" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -366,15 +381,25 @@
                         <viewLayoutGuide key="safeArea" id="gjG-Di-EmZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WrL-QE-5xG" firstAttribute="centerX" secondItem="Q8Q-DG-XbR" secondAttribute="centerX" id="QH8-pi-5a2"/>
-                            <constraint firstItem="WrL-QE-5xG" firstAttribute="centerY" secondItem="Q8Q-DG-XbR" secondAttribute="centerY" id="Sfk-Yx-e6i"/>
+                            <constraint firstItem="gjG-Di-EmZ" firstAttribute="trailing" secondItem="T0Y-bW-Y2d" secondAttribute="trailing" constant="122" id="Bhs-8g-KWB"/>
+                            <constraint firstItem="WrL-QE-5xG" firstAttribute="top" secondItem="gjG-Di-EmZ" secondAttribute="top" constant="31" id="MRg-CR-ovs"/>
+                            <constraint firstItem="Hn4-tW-ANw" firstAttribute="leading" secondItem="gjG-Di-EmZ" secondAttribute="leading" constant="38" id="Qfb-fA-lhi"/>
+                            <constraint firstItem="Hn4-tW-ANw" firstAttribute="top" secondItem="T0Y-bW-Y2d" secondAttribute="bottom" constant="70" id="X2O-18-GfO"/>
+                            <constraint firstItem="T0Y-bW-Y2d" firstAttribute="top" secondItem="WrL-QE-5xG" secondAttribute="bottom" constant="50" id="lJJ-9u-vvU"/>
+                            <constraint firstItem="T0Y-bW-Y2d" firstAttribute="leading" secondItem="gjG-Di-EmZ" secondAttribute="leading" constant="122" id="lqm-wC-L65"/>
+                            <constraint firstItem="gjG-Di-EmZ" firstAttribute="trailing" secondItem="Hn4-tW-ANw" secondAttribute="trailing" constant="38" id="pIX-vy-CPN"/>
+                            <constraint firstItem="WrL-QE-5xG" firstAttribute="centerX" secondItem="Q8Q-DG-XbR" secondAttribute="centerX" id="v77-LI-bhj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Taux éthylomètre" id="nY3-8c-bxa"/>
+                    <connections>
+                        <outlet property="ui_label_taux_retenu" destination="Hn4-tW-ANw" id="ADf-cg-1v5"/>
+                        <outlet property="ui_textField_taux_affiche" destination="T0Y-bW-Y2d" id="aLf-3h-JKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2c9-dt-Rmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="609"/>
+            <point key="canvasLocation" x="-34.399999999999999" y="608.54572713643188"/>
         </scene>
         <!--Natinf-->
         <scene sceneID="CbI-Kx-NFW">
@@ -423,7 +448,7 @@
         <image name="Arrow-Left" width="28" height="28"/>
         <image name="book-simple-7" width="26" height="22"/>
         <image name="car-side-7" width="27" height="15"/>
-        <image name="percent-decor-7" width="29" height="29"/>
+        <image name="drink-toast" width="29" height="28"/>
         <image name="spanner-7" width="28" height="28"/>
         <namedColor name="AccentColor">
             <color red="0.15399999916553497" green="0.51099997758865356" blue="0.24500000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

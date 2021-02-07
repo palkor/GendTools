@@ -16,6 +16,12 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
     var selectedNatinf:Natinf?
     let searchController = UISearchController(searchResultsController: nil) // barre de recherche
     var state:Bool = false // variable état bouton recherche texte/natinf
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    var isFiltering: Bool {
+        return searchController.isActive && !isSearchBarEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +38,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         searchController.searchBar.placeholder = "Recherche d'infraction"
         searchController.searchBar.barTintColor = UIColor.systemGreen
         searchController.searchBar.backgroundColor = UIColor.systemGreen
-        searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.systemBackground
         navigationItem.searchController = searchController
       
 
@@ -61,7 +67,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         
         for i in 0 ... (_natinfItems.count) - 1 {
             
-            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as? String ?? "-",famille: _natinfItems[i]["Famille"] as! String, retrait_de_point: _natinfItems[i]["Retrait_points"] as? Int ?? 0, infraction_prevu: (_natinfItems[i]["Prevu"] as? String)!, infraction_reprime: _natinfItems[i]["Reprime"] as! String))
+            _natinfsArray.append(Natinf(qualificationPVe: _natinfItems[i]["QualificationPVe"] as! String, qualification: _natinfItems[i]["Qualification"] as! String, natinf: _natinfItems[i]["Natinf"] as! Int, classe: _natinfItems[i]["Classe"] as! Int, montant_amende: _natinfItems[i]["Montant_amende"] as! Int, montant_amende_minore: _natinfItems[i]["Montant_minore"] as! Int,famille: _natinfItems[i]["Famille"] as! String, retrait_de_point: _natinfItems[i]["Retrait_points"] as? Int ?? 0, infraction_prevu: (_natinfItems[i]["Prevu"] as? String)!, infraction_reprime: _natinfItems[i]["Reprime"] as! String))
        
         }
         
@@ -78,7 +84,8 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        if searchController.isActive && searchController.searchBar.text != "" {
+        if isFiltering {
+       // if searchController.isActive && searchController.searchBar.text != "" {
             return _filteredsNatinfArray.count
        
         } else {
@@ -114,7 +121,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         if segue.identifier == "segueDetailNatinf" {
             if let cell = sender as? UITableViewCell {
                 if let indexPath = self.tableView.indexPath(for: cell) {
-                    if searchController.isActive {
+                    if isFiltering {
                         selectedNatinf = _filteredsNatinfArray[indexPath.row]
                     } else {
                         selectedNatinf = _natinfsArray[indexPath.row]

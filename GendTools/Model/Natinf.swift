@@ -14,13 +14,13 @@ class Natinf {
     var natinf: Int
     var classe: Int
     var montant_amende: Int
-    var montant_amende_minore: String
+    var montant_amende_minore: Int
     var famille: String
     var retrait_de_point: Int
     var infraction_prevu: String
     var infraction_reprime: String
    
-    init(qualificationPVe: String, qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: String , famille:String, retrait_de_point:Int, infraction_prevu: String, infraction_reprime: String) {
+    init(qualificationPVe: String, qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: Int , famille:String, retrait_de_point:Int, infraction_prevu: String, infraction_reprime: String) {
         self.qualificationPVe = qualificationPVe
         self.qualification = qualification
         self.natinf = natinf

@@ -16,9 +16,10 @@
 		505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */; };
 		505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */; };
 		505BED8025AA5CF0000EE460 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7F25AA5CF0000EE460 /* SettingViewController.swift */; };
+		5078F40825CF134B001A0B7A /* TauxAlco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F40725CF134B001A0B7A /* TauxAlco.swift */; };
+		50AD1FDE25CC9CAB005E50C8 /* natinfdb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50AD1FDD25CC9CAB005E50C8 /* natinfdb.plist */; };
 		50C77EFF25AA615D000204B3 /* DetailNatinfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77EFE25AA615D000204B3 /* DetailNatinfViewController.swift */; };
 		50C77F0225AA6193000204B3 /* EthyloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77F0125AA6193000204B3 /* EthyloViewController.swift */; };
-		50C77F0625AA6803000204B3 /* natinfdb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50C77F0525AA6803000204B3 /* natinfdb.plist */; };
 		50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */; };
 		50DD166B25B35FEA007D399B /* Natinf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD166A25B35FEA007D399B /* Natinf.swift */; };
 		50DF943A25B9F1450036865C /* SpeedCompute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DF943925B9F1450036865C /* SpeedCompute.swift */; };
@@ -36,9 +37,10 @@
 		505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatinfTableViewController.swift; sourceTree = "<group>"; };
 		505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		505BED7F25AA5CF0000EE460 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5078F40725CF134B001A0B7A /* TauxAlco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TauxAlco.swift; sourceTree = "<group>"; };
+		50AD1FDD25CC9CAB005E50C8 /* natinfdb.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = natinfdb.plist; sourceTree = "<group>"; };
 		50C77EFE25AA615D000204B3 /* DetailNatinfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNatinfViewController.swift; sourceTree = "<group>"; };
 		50C77F0125AA6193000204B3 /* EthyloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthyloViewController.swift; sourceTree = "<group>"; };
-		50C77F0525AA6803000204B3 /* natinfdb.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = natinfdb.plist; sourceTree = "<group>"; };
 		50C77F0825AA6A7F000204B3 /* NatinfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatinfTableViewCell.swift; sourceTree = "<group>"; };
 		50DD166A25B35FEA007D399B /* Natinf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Natinf.swift; sourceTree = "<group>"; };
 		50DF943925B9F1450036865C /* SpeedCompute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCompute.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 				505BED5C25AA53F6000EE460 /* AppDelegate.swift */,
 				505BED5E25AA53F6000EE460 /* SceneDelegate.swift */,
 				505BED6225AA53F6000EE460 /* Main.storyboard */,
-				50C77F0525AA6803000204B3 /* natinfdb.plist */,
+				50AD1FDD25CC9CAB005E50C8 /* natinfdb.plist */,
 				505BED6525AA53FA000EE460 /* Assets.xcassets */,
 				505BED6725AA53FA000EE460 /* LaunchScreen.storyboard */,
 				505BED6A25AA53FA000EE460 /* Info.plist */,
@@ -106,6 +108,7 @@
 			children = (
 				50DD166A25B35FEA007D399B /* Natinf.swift */,
 				50DF943925B9F1450036865C /* SpeedCompute.swift */,
+				5078F40725CF134B001A0B7A /* TauxAlco.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,8 +172,8 @@
 			files = (
 				505BED6925AA53FA000EE460 /* LaunchScreen.storyboard in Resources */,
 				505BED6625AA53FA000EE460 /* Assets.xcassets in Resources */,
-				50C77F0625AA6803000204B3 /* natinfdb.plist in Resources */,
 				505BED6425AA53F6000EE460 /* Main.storyboard in Resources */,
+				50AD1FDE25CC9CAB005E50C8 /* natinfdb.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +190,7 @@
 				505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */,
 				50DD166B25B35FEA007D399B /* Natinf.swift in Sources */,
 				50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */,
+				5078F40825CF134B001A0B7A /* TauxAlco.swift in Sources */,
 				505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */,
 				50C77EFF25AA615D000204B3 /* DetailNatinfViewController.swift in Sources */,
 				505BED5F25AA53F6000EE460 /* SceneDelegate.swift in Sources */,

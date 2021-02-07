@@ -53,9 +53,7 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        ui_label_Speed.text = "Vitesse retenue : "
-        ui_label_points.text = "Retrait de point : "
-        
+    clearUi_label()
     }
 
     // MARK: - Selection de la limitation de vitesse
@@ -81,6 +79,7 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
             vitesseLimit = 0
         }
         ui_label_vitesse.text = "Vitesse limitée à : \(vitesseLimit )"
+        clearUi_label()
         UserDefaults.standard.setValue(vitesseLimit, forKey: OPTION_SAVE_SPEED)
         
     }
@@ -134,5 +133,11 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
         ui_textField_speed.text = String("")
         ui_textField_speed.resignFirstResponder()
     }
+    
+    func clearUi_label() {
+        ui_label_Speed.text = "Vitesse retenue : "
+        ui_label_points.text = "Retrait de point : "
+    }
+    
   
 }
