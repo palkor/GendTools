@@ -6,6 +6,8 @@
 //  Copyright © 2021 Pascal Ormancey. All rights reserved.
 //
 
+// Model de class Natinf
+
 import Foundation
 
 class Natinf {

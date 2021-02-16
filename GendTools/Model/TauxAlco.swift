@@ -24,7 +24,7 @@ class TauxAlco {
              
             taux = tauxAlcoolEthylo - (tauxAlcoolEthylo * 8) / 100
             
-        } else if tauxAlcoolEthylo >= 2.6 {
+        } else if tauxAlcoolEthylo > 2.0 && tauxAlcoolEthylo <= 2.6 {
             taux = tauxAlcoolEthylo - (tauxAlcoolEthylo * 30) / 100
         }
         else {

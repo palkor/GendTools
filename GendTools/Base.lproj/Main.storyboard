@@ -19,17 +19,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ySp-yO-W9r" customClass="NatinfTableViewCell" customModule="GendTools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="47.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="16.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ySp-yO-W9r" id="UeX-e7-Ufw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="16.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label dddd ccccc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-De-1uF">
-                                            <rect key="frame" x="5" y="0.0" width="370" height="47.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-De-1uF" customClass="PaddingLabel" customModule="GendTools" customModuleProvider="target">
+                                            <rect key="frame" x="5" y="0.0" width="370" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -68,60 +82,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-jF-sUP">
-                                <rect key="frame" x="5" y="71" width="365" height="525"/>
+                                <rect key="frame" x="5" y="60" width="365" height="547"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATINF : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc8-tZ-xHV">
-                                        <rect key="frame" x="0.0" y="0.0" width="365" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Nafinf   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-Hh-4CG">
-                                        <rect key="frame" x="0.0" y="46" width="365" height="67"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="47.5" width="365" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prévu  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPb-55-Drd">
-                                        <rect key="frame" x="0.0" y="141" width="365" height="54"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="147.5" width="365" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réprimé  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0X-Rl-EPQ">
-                                        <rect key="frame" x="0.0" y="223" width="365" height="54"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="233" width="365" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyO-Qe-Tsi">
-                                        <rect key="frame" x="0.0" y="305" width="365" height="18"/>
+                                        <rect key="frame" x="0.0" y="318.5" width="365" height="19.5"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant Amende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obr-gm-ZHR">
-                                        <rect key="frame" x="0.0" y="351" width="365" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="366" width="365" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant amende minorée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-WN-cRm">
-                                        <rect key="frame" x="0.0" y="397" width="365" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="413.5" width="365" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrait de point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWy-hb-V3Q">
-                                        <rect key="frame" x="0.0" y="443" width="365" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="461" width="365" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Famille " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-bo-ZSq">
-                                        <rect key="frame" x="0.0" y="489" width="365" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="508.5" width="365" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -201,6 +215,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fichier infraction en date du 22/08/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hO-bG-bQP">
+                                <rect key="frame" x="16" y="262" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Gend Tools version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d91-Vf-efR">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rLA-Y3-wRI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -208,11 +234,17 @@
                             <constraint firstItem="5UU-Ro-xUH" firstAttribute="leading" secondItem="Z9m-E1-gq9" secondAttribute="trailing" constant="60" id="BjN-Jv-WiM"/>
                             <constraint firstItem="Aaj-Zb-D7M" firstAttribute="leading" secondItem="Z9m-E1-gq9" secondAttribute="trailing" constant="-82.5" id="EE8-ej-tA2"/>
                             <constraint firstItem="5UU-Ro-xUH" firstAttribute="top" secondItem="Aaj-Zb-D7M" secondAttribute="bottom" constant="54" id="Kkc-ge-5Ml"/>
+                            <constraint firstItem="rLA-Y3-wRI" firstAttribute="trailing" secondItem="4hO-bG-bQP" secondAttribute="trailing" constant="16" id="STc-rP-0H9"/>
+                            <constraint firstItem="4hO-bG-bQP" firstAttribute="top" secondItem="Z9m-E1-gq9" secondAttribute="bottom" constant="57" id="Xfd-Yk-Prg"/>
+                            <constraint firstItem="rLA-Y3-wRI" firstAttribute="trailing" secondItem="d91-Vf-efR" secondAttribute="trailing" constant="16" id="YGd-70-K3B"/>
                             <constraint firstItem="Z9m-E1-gq9" firstAttribute="leading" secondItem="rLA-Y3-wRI" secondAttribute="leading" constant="16" id="apc-CO-Lo5"/>
                             <constraint firstItem="Z9m-E1-gq9" firstAttribute="top" secondItem="Aaj-Zb-D7M" secondAttribute="bottom" constant="59" id="ePV-zV-242"/>
+                            <constraint firstItem="d91-Vf-efR" firstAttribute="leading" secondItem="rLA-Y3-wRI" secondAttribute="leading" constant="16" id="jtF-d0-k9M"/>
                             <constraint firstItem="Aaj-Zb-D7M" firstAttribute="centerX" secondItem="ojH-1j-yv4" secondAttribute="centerX" id="mCI-ku-3U7"/>
                             <constraint firstItem="rLA-Y3-wRI" firstAttribute="trailing" secondItem="5UU-Ro-xUH" secondAttribute="trailing" constant="52" id="mqK-UC-PDo"/>
                             <constraint firstItem="Aaj-Zb-D7M" firstAttribute="top" secondItem="rLA-Y3-wRI" secondAttribute="top" constant="47" id="nFU-vX-pfO"/>
+                            <constraint firstItem="d91-Vf-efR" firstAttribute="top" secondItem="4hO-bG-bQP" secondAttribute="bottom" constant="40" id="tDE-Hk-SaS"/>
+                            <constraint firstItem="4hO-bG-bQP" firstAttribute="leading" secondItem="rLA-Y3-wRI" secondAttribute="leading" constant="16" id="zhg-oD-CAk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Réglages" id="YxV-ia-dDy"/>
@@ -269,20 +301,20 @@
                                     <action selector="actionChangeSegmentedControl:" destination="nDx-d1-qkb" eventType="valueChanged" id="rr2-qF-H1O"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse limite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-UZ-TSq">
-                                <rect key="frame" x="137" y="134" width="101" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse limite :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-UZ-TSq">
+                                <rect key="frame" x="132.5" y="134" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse retenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-Ks-NAy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse retenue :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-Ks-NAy">
                                 <rect key="frame" x="119" y="323" width="181" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vitesse relevée" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-4f-VCE">
-                                <rect key="frame" x="111.5" y="230" width="152" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vitesse relevée" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-4f-VCE" customClass="TextFieldWithPadding" customModule="GendTools" customModuleProvider="target">
+                                <rect key="frame" x="111.5" y="230" width="152" height="46.5"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -290,8 +322,8 @@
                                     <outlet property="delegate" destination="nDx-d1-qkb" id="Set-cG-Vpe"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrait de point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d06-x2-bbm">
-                                <rect key="frame" x="129" y="420" width="117" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrait de point :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d06-x2-bbm">
+                                <rect key="frame" x="125" y="420" width="125.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,22 +389,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux affiché par l'éthylomètre en mg/litre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrL-QE-5xG">
-                                <rect key="frame" x="32" y="75" width="311" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calcul du taux pondéré d'alcoolémie en mg/litre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrL-QE-5xG">
+                                <rect key="frame" x="7" y="75" width="361.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taux en mg/litre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-bW-Y2d">
-                                <rect key="frame" x="122" y="145" width="131" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taux en mg/litre" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-bW-Y2d" customClass="TextFieldWithPadding" customModule="GendTools" customModuleProvider="target">
+                                <rect key="frame" x="122" y="145" width="131" height="46.5"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="Wpe-9d-MK2" id="QF7-RH-4E2"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux retenu :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn4-tW-ANw">
-                                <rect key="frame" x="38" y="249" width="299" height="21"/>
+                                <rect key="frame" x="38" y="261.5" width="299" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -405,7 +438,7 @@
         <scene sceneID="CbI-Kx-NFW">
             <objects>
                 <navigationController id="DZu-cW-mEy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Natinf" image="book-simple-7" id="Upy-RI-5hW"/>
+                    <tabBarItem key="tabBarItem" title="Natinf" image="handcuff" id="Upy-RI-5hW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Arrow-Left" backIndicatorTransitionMaskImage="Arrow-Left" id="wQq-Xg-ax6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -444,11 +477,22 @@
             <point key="canvasLocation" x="-2132" y="-864"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="KCQ-De-1uF">
+            <size key="intrinsicContentSize" width="35" height="26"/>
+        </designable>
+        <designable name="T0Y-bW-Y2d">
+            <size key="intrinsicContentSize" width="140.5" height="46.5"/>
+        </designable>
+        <designable name="vyg-4f-VCE">
+            <size key="intrinsicContentSize" width="136" height="46.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Arrow-Left" width="28" height="28"/>
-        <image name="book-simple-7" width="26" height="22"/>
         <image name="car-side-7" width="27" height="15"/>
         <image name="drink-toast" width="29" height="28"/>
+        <image name="handcuff" width="30" height="22"/>
         <image name="spanner-7" width="28" height="28"/>
         <namedColor name="AccentColor">
             <color red="0.15399999916553497" green="0.51099997758865356" blue="0.24500000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

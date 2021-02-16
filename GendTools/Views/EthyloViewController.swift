@@ -18,11 +18,11 @@ class EthyloViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
         self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
         
-        let alcool = TauxAlco.init(tauxAlcoolEthylo: 0.45)
-        let taux = alcool.tauxRetenu
-        print(taux)
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ui_textField_taux_affiche.text = ""
+        ui_label_taux_retenu.text = "Taux retenu :"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -30,24 +30,30 @@ class EthyloViewController: UIViewController, UITextFieldDelegate {
         if let taux_alcool = ui_textField_taux_affiche.text {
             let alcool = TauxAlco.init(tauxAlcoolEthylo: Double(taux_alcool) ?? 0.0)
             let taux = alcool.tauxRetenu.reduceScale(to: 2)
-            ui_label_taux_retenu.text = "Taux retenue : \(taux) mg/litre."
+            if taux != 0 {
+                ui_label_taux_retenu.text = "Taux retenu : \(taux) mg/litre."
+                ui_textField_taux_affiche.resignFirstResponder()
+            } else {
+                let alert = UIAlertController(title: "Erreur", message: "Veuillez entrer une valeur correcte. Utilisez le . pour la valeur décimale", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(alertAction)
+                present(alert, animated: true, completion: nil)
+            }
+                
             
            
+            
         }
         
         return true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        ui_textField_taux_affiche.text = ""
+        ui_textField_taux_affiche.resignFirstResponder()
+        return false
     }
-    */
 
 }
 

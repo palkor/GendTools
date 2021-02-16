@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "percent-decor-7.png",
+      "filename" : "handcuff.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "percent-decor-9.png",
+      "filename" : "handcuff-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "percent-decor-8.png",
+      "filename" : "handcuff-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

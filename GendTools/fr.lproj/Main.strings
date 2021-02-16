@@ -1,0 +1,108 @@
+
+/* Class = "UINavigationItem"; title = "Infraction"; ObjectID = "7Yg-ca-oxn"; */
+"7Yg-ca-oxn.title" = "Infraction";
+
+/* Class = "UILabel"; text = "Réglages"; ObjectID = "Aaj-Zb-D7M"; */
+"Aaj-Zb-D7M.text" = "Réglages";
+
+/* Class = "UINavigationItem"; title = "Calcul vitesse"; ObjectID = "FRQ-NZ-Gtv"; */
+"FRQ-NZ-Gtv.title" = "Calcul vitesse";
+
+/* Class = "UILabel"; text = "Vitesse retenue"; ObjectID = "Fhh-Ks-NAy"; */
+"Fhh-Ks-NAy.text" = "Vitesse retenue";
+
+/* Class = "UILabel"; text = "NATINF : "; ObjectID = "Hc8-tZ-xHV"; */
+"Hc8-tZ-xHV.text" = "NATINF : ";
+
+/* Class = "UILabel"; text = "Taux retenu :"; ObjectID = "Hn4-tW-ANw"; */
+"Hn4-tW-ANw.text" = "Taux retenu :";
+
+/* Class = "UINavigationItem"; title = "Détail infraction"; ObjectID = "IQb-X5-Vkn"; */
+"IQb-X5-Vkn.title" = "Détail infraction";
+
+/* Class = "UITabBarItem"; title = "Réglages"; ObjectID = "Ihi-TC-kwD"; */
+"Ihi-TC-kwD.title" = "Réglages";
+
+/* Class = "UILabel"; text = "Label dddd ccccc"; ObjectID = "KCQ-De-1uF"; */
+"KCQ-De-1uF.text" = "Label dddd ccccc";
+
+/* Class = "UILabel"; text = "Detail Nafinf   "; ObjectID = "N6t-Hh-4CG"; */
+"N6t-Hh-4CG.text" = "Detail Nafinf   ";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[0] = "30"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[0]" = "30";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[1] = "50"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[1]" = "50";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[2] = "70"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[2]" = "70";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[3] = "80"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[3]" = "80";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[4] = "90"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[4]" = "90";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[5] = "110"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[5]" = "110";
+
+/* Class = "UISegmentedControl"; Pij-Bo-gcf.segmentTitles[6] = "130"; ObjectID = "Pij-Bo-gcf"; */
+"Pij-Bo-gcf.segmentTitles[6]" = "130";
+
+/* Class = "UITextField"; placeholder = "Taux en mg/litre"; ObjectID = "T0Y-bW-Y2d"; */
+"T0Y-bW-Y2d.placeholder" = "Taux en mg/litre";
+
+/* Class = "UITabBarItem"; title = "Natinf"; ObjectID = "Upy-RI-5hW"; */
+"Upy-RI-5hW.title" = "Natinf";
+
+/* Class = "UILabel"; text = "Classe"; ObjectID = "UyO-Qe-Tsi"; */
+"UyO-Qe-Tsi.text" = "Classe";
+
+/* Class = "UILabel"; text = "Taux affiché par l'éthylomètre en mg/litre"; ObjectID = "WrL-QE-5xG"; */
+"WrL-QE-5xG.text" = "Taux affiché par l'éthylomètre en mg/litre";
+
+/* Class = "UILabel"; text = "Réprimé  "; ObjectID = "Y0X-Rl-EPQ"; */
+"Y0X-Rl-EPQ.text" = "Réprimé  ";
+
+/* Class = "UINavigationItem"; title = "Réglages"; ObjectID = "YxV-ia-dDy"; */
+"YxV-ia-dDy.title" = "Réglages";
+
+/* Class = "UILabel"; text = "Recherche par NATINF"; ObjectID = "Z9m-E1-gq9"; */
+"Z9m-E1-gq9.text" = "Recherche par NATINF";
+
+/* Class = "UILabel"; text = "Prévu  "; ObjectID = "aPb-55-Drd"; */
+"aPb-55-Drd.text" = "Prévu  ";
+
+/* Class = "UILabel"; text = "Vitesse limite"; ObjectID = "ajU-UZ-TSq"; */
+"ajU-UZ-TSq.text" = "Vitesse limite";
+
+/* Class = "UILabel"; text = "Retrait de point"; ObjectID = "d06-x2-bbm"; */
+"d06-x2-bbm.text" = "Retrait de point";
+
+/* Class = "UILabel"; text = "Retrait de point"; ObjectID = "fWy-hb-V3Q"; */
+"fWy-hb-V3Q.text" = "Retrait de point";
+
+/* Class = "UITabBarItem"; title = "Ethylomètre"; ObjectID = "jeU-zO-VVg"; */
+"jeU-zO-VVg.title" = "Ethylomètre";
+
+/* Class = "UITabBarItem"; title = "Vitesse"; ObjectID = "kgs-BS-HhV"; */
+"kgs-BS-HhV.title" = "Vitesse";
+
+/* Class = "UILabel"; text = "Famille "; ObjectID = "mHC-bo-ZSq"; */
+"mHC-bo-ZSq.text" = "Famille ";
+
+/* Class = "UINavigationItem"; title = "Taux éthylomètre"; ObjectID = "nY3-8c-bxa"; */
+"nY3-8c-bxa.title" = "Taux éthylomètre";
+
+/* Class = "UILabel"; text = "Montant Amende"; ObjectID = "obr-gm-ZHR"; */
+"obr-gm-ZHR.text" = "Montant Amende";
+
+/* Class = "UITextField"; placeholder = "Vitesse relevée"; ObjectID = "vyg-4f-VCE"; */
+"vyg-4f-VCE.placeholder" = "Vitesse relevée";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "xit-PI-p2P"; */
+"xit-PI-p2P.title" = "  ";
+
+/* Class = "UILabel"; text = "Montant amende minorée"; ObjectID = "zu5-WN-cRm"; */
+"zu5-WN-cRm.text" = "Montant amende minorée";

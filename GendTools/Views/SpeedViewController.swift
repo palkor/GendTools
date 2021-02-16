@@ -12,8 +12,8 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
     let OPTION_SAVE_SPEED = "SPEED"
     
     var vitesseRetenue: Int = 0 // vitesse retenue
-    var retraitDePoint:Int = 0
-    var vitesseLimit:Int = 0
+    var retraitDePoint:Int = 0 // nombre de point 
+    var vitesseLimit:Int = 0 // limitation de la vitesse
     var index:Int = 0
     
     @IBOutlet weak var ui_segment_select_speed: UISegmentedControl!
@@ -97,9 +97,9 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
                 computeSpeedAndPoint()
                 
                 } else {
-                let alert = UIAlertController(title: "Erreur", message: "Veuillez entrer un nombre", preferredStyle: .alert)
-                let alertAcyion = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(alertAcyion)
+                let alert = UIAlertController(title: "Erreur", message: "Veuillez entrer une valeur correcte.", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(alertAction)
                 present(alert, animated: true, completion: nil)
                 }
                         
@@ -108,10 +108,6 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
         
         }
         
-  
-    
-    
-    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let caractere = CharacterSet.decimalDigits
@@ -122,6 +118,12 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        ui_textField_speed.text = ""
+        ui_textField_speed.resignFirstResponder()
+        return false
     }
     
     // MARK: - calcul du nombre de point à retirer

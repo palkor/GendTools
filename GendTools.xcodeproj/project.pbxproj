@@ -16,6 +16,8 @@
 		505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */; };
 		505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */; };
 		505BED8025AA5CF0000EE460 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BED7F25AA5CF0000EE460 /* SettingViewController.swift */; };
+		5077F1F225D8819E000E9CB5 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077F1F125D8819E000E9CB5 /* TextFieldWithPadding.swift */; };
+		5077F1FB25D88F13000E9CB5 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077F1FA25D88F13000E9CB5 /* PaddingLabel.swift */; };
 		5078F40825CF134B001A0B7A /* TauxAlco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078F40725CF134B001A0B7A /* TauxAlco.swift */; };
 		50AD1FDE25CC9CAB005E50C8 /* natinfdb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50AD1FDD25CC9CAB005E50C8 /* natinfdb.plist */; };
 		50C77EFF25AA615D000204B3 /* DetailNatinfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C77EFE25AA615D000204B3 /* DetailNatinfViewController.swift */; };
@@ -37,6 +39,8 @@
 		505BED7725AA5C86000EE460 /* NatinfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatinfTableViewController.swift; sourceTree = "<group>"; };
 		505BED7A25AA5CCD000EE460 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		505BED7F25AA5CF0000EE460 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5077F1F125D8819E000E9CB5 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
+		5077F1FA25D88F13000E9CB5 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		5078F40725CF134B001A0B7A /* TauxAlco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TauxAlco.swift; sourceTree = "<group>"; };
 		50AD1FDD25CC9CAB005E50C8 /* natinfdb.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = natinfdb.plist; sourceTree = "<group>"; };
 		50C77EFE25AA615D000204B3 /* DetailNatinfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNatinfViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		505BED5B25AA53F6000EE460 /* GendTools */ = {
 			isa = PBXGroup;
 			children = (
+				5077F1F425D881AE000E9CB5 /* Class */,
 				50DD166D25B35FF3007D399B /* Model */,
 				505BED7525AA550D000EE460 /* Views */,
 				505BED5C25AA53F6000EE460 /* AppDelegate.swift */,
@@ -101,6 +106,15 @@
 				505BED7225AA5501000EE460 /* MainTabBarController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5077F1F425D881AE000E9CB5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5077F1F125D8819E000E9CB5 /* TextFieldWithPadding.swift */,
+				5077F1FA25D88F13000E9CB5 /* PaddingLabel.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		50DD166D25B35FF3007D399B /* Model */ = {
@@ -188,9 +202,11 @@
 				50C77F0225AA6193000204B3 /* EthyloViewController.swift in Sources */,
 				50DF943A25B9F1450036865C /* SpeedCompute.swift in Sources */,
 				505BED7B25AA5CCD000EE460 /* SpeedViewController.swift in Sources */,
+				5077F1F225D8819E000E9CB5 /* TextFieldWithPadding.swift in Sources */,
 				50DD166B25B35FEA007D399B /* Natinf.swift in Sources */,
 				50C77F0925AA6A7F000204B3 /* NatinfTableViewCell.swift in Sources */,
 				5078F40825CF134B001A0B7A /* TauxAlco.swift in Sources */,
+				5077F1FB25D88F13000E9CB5 /* PaddingLabel.swift in Sources */,
 				505BED7825AA5C86000EE460 /* NatinfTableViewController.swift in Sources */,
 				50C77EFF25AA615D000204B3 /* DetailNatinfViewController.swift in Sources */,
 				505BED5F25AA53F6000EE460 /* SceneDelegate.swift in Sources */,
@@ -225,6 +241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -286,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

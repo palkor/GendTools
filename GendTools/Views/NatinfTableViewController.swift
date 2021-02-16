@@ -25,13 +25,16 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
+    
        
-    // MARK: - Paramétrage aspect du navigation controller
+// MARK: - Paramétrage aspect du navigation controller
         self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
         self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
         
         
-    // MARK: - Paramètrage de la barre de recherche
+// MARK: - Paramètrage de la barre de recherche
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -46,7 +49,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        // MARK: - Récupération du fichier natinfdb.plist
+    // MARK: - Récupération du fichier natinfdb.plist
         
         if let natinfdbPlistPath = Bundle.main.url(forResource: "natinfdb", withExtension: "plist") {
             do {
@@ -63,7 +66,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
             }
         }
         
-        // MARK: - Création du tableau d'objet NATINF à partir du tableau brut de données.
+// MARK: - Création du tableau d'objet NATINF à partir du tableau brut de données.
         
         for i in 0 ... (_natinfItems.count) - 1 {
             
@@ -79,7 +82,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         
     }
 
-     // MARK: - Table view data source
+// MARK: - Table view data source
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -115,7 +118,8 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
   
 
 
-    // MARK: - Navigation
+// MARK: - Navigation vers écran détail infraction.
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         if segue.identifier == "segueDetailNatinf" {
@@ -165,6 +169,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         tableView.reloadData()
     
     }
-
+    
     
 }
+
