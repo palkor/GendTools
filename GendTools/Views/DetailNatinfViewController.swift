@@ -9,8 +9,8 @@ import UIKit
 
 class DetailNatinfViewController: UIViewController {
     
-    var natinfSelected = [String:Any]()
-    var natinfNatinf: Natinf?
+    // var natinfSelected = [String:Any]() // Dictionnaire
+    var natinfNatinf: Natinf? // Object Natinf sélectionné passsé par la TableView
     
     @IBOutlet weak var ui_label_qualification: UILabel!
     @IBOutlet weak var ui_label_natinf: UILabel!

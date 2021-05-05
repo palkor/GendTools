@@ -13,13 +13,17 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var ui_switch_search: UISwitch!
     
+    @IBOutlet weak var ui_label_versionApp: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
         self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
-        // Do any additional setup after loading the view/remove file
+        
+        let appVersion = Bundle.main.appVersion
+        ui_label_versionApp.text = "Application GendTools version : \(appVersion ?? "non disponible")"
+        // Do any additional setup after loading the view/remove fil
         
     }
     
@@ -33,4 +37,14 @@ class SettingViewController: UIViewController {
     }
     
     
+}
+
+extension Bundle {
+    var appVersion: String? {
+        self.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    
+    static var mainAppVersion: String? {
+        Bundle.main.appVersion
+    }
 }
