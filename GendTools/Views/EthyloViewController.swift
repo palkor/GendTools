@@ -27,7 +27,7 @@ class EthyloViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if let taux_alcool = ui_textField_taux_affiche.text {
+        if let taux_alcool = ui_textField_taux_affiche.text?.replacingOccurrences(of: ",", with: ".") {
             let alcool = TauxAlco.init(tauxAlcoolEthylo: Double(taux_alcool) ?? 0.0)
             let taux = alcool.tauxRetenu.reduceScale(to: 2)
             if taux != 0 {
@@ -35,10 +35,10 @@ class EthyloViewController: UIViewController, UITextFieldDelegate {
                 let currencyFormatter = NumberFormatter()
                 currencyFormatter.numberStyle = .decimal
                 currencyFormatter.locale = Locale.current
-                ui_label_taux_retenu.text = currencyFormatter.string(from: NSNumber(value: taux))
+                ui_label_taux_retenu.text = "Taux retenu : \(currencyFormatter.string(from: NSNumber(value: taux)) ?? "0")"
                 ui_textField_taux_affiche.resignFirstResponder()
             } else {
-                let alert = UIAlertController(title: "Erreur", message: "Veuillez entrer une valeur correcte. Utilisez le . pour la valeur décimale", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Erreur", message: "Veuillez entrer une valeur décimale correcte.", preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(alertAction)
                 present(alert, animated: true, completion: nil)
@@ -56,6 +56,7 @@ class EthyloViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         ui_textField_taux_affiche.text = ""
         ui_textField_taux_affiche.resignFirstResponder()
+        ui_label_taux_retenu.text = "Taux retenu :"
         return false
     }
     
@@ -75,9 +76,5 @@ extension Double {
         return originalDecimal
     }
 }
-
-// MARK: - Formatage
-
-
 
 
