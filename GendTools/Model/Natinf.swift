@@ -6,23 +6,43 @@
 //  Copyright © 2021 Pascal Ormancey. All rights reserved.
 //
 
-// Model de class Natinf
-
 import Foundation
 
-class Natinf {
-    var qualificationPVe: String
-    var qualification:String
-    var natinf: Int
-    var classe: Int
-    var montant_amende: Int
-    var montant_amende_minore: Int
-    var famille: String
-    var retrait_de_point: Int
-    var infraction_prevu: String
-    var infraction_reprime: String
-   
-    init(qualificationPVe: String, qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: Int , famille:String, retrait_de_point:Int, infraction_prevu: String, infraction_reprime: String) {
+/// Modélise une infraction routière avec ses caractéristiques et sanctions associées.
+struct Natinf: Codable {
+    /// Qualification PVe de l'infraction.
+    let qualificationPVe: String
+    /// Qualification textuelle de l'infraction.
+    let qualification: String
+    /// Identifiant numérique de l'infraction.
+    let natinf: Int
+    /// Classe de l'infraction.
+    let classe: Int
+    /// Montant de l'amende associée.
+    let montant_amende: Int
+    /// Montant minoré de l'amende.
+    let montant_amende_minore: Int
+    /// Famille d'infraction.
+    let famille: String
+    /// Nombre de points retirés.
+    let retrait_de_point: Int
+    /// Texte décrivant l'infraction prévue.
+    let infraction_prevu: String
+    /// Texte décrivant l'infraction réprimée.
+    let infraction_reprime: String
+    
+    init(
+        qualificationPVe: String,
+        qualification: String,
+        natinf: Int,
+        classe: Int,
+        montant_amende: Int,
+        montant_amende_minore: Int,
+        famille: String,
+        retrait_de_point: Int,
+        infraction_prevu: String,
+        infraction_reprime: String
+    ) {
         self.qualificationPVe = qualificationPVe
         self.qualification = qualification
         self.natinf = natinf

@@ -24,6 +24,11 @@ class SpeedViewController: UIViewController, UITextFieldDelegate {
    
     override func viewDidLoad() {
         
+        ui_textField_speed.layer.cornerRadius = 8
+        ui_textField_speed.layer.masksToBounds = true
+        ui_textField_speed.layer.borderWidth = 1
+        ui_textField_speed.layer.borderColor = UIColor.separator.cgColor
+        
         self.navigationController?.navigationBar.backgroundColor = UIColor.systemGreen
         self.navigationController?.navigationBar.barTintColor = UIColor.systemGreen
         

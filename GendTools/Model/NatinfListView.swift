@@ -3,7 +3,33 @@ import SwiftUI
 /// Vue principale affichant la liste des infractions NATINF avec barre de recherche.
 struct NatinfListView: View {
     @State private var searchText = ""
-    let natinfs: [Natinf]
+    @State private var natinfs: [Natinf] = []
+
+    init() {
+        _natinfs = State(initialValue: Self.loadNatinfsFromPlist())
+    }
+
+    /// Charge et décode les données NATINF à partir du fichier natinfdb.plist dans le bundle principal.
+    /// - Returns: Un tableau de Natinf décodé ou un tableau vide en cas d'erreur.
+    static func loadNatinfsFromPlist() -> [Natinf] {
+        // Chercher l'URL du fichier natinfdb.plist dans le bundle principal
+        guard let url = Bundle.main.url(forResource: "natinfdb", withExtension: "plist") else {
+            print("Erreur: Le fichier natinfdb.plist est introuvable dans le bundle principal.")
+            return []
+        }
+        do {
+            // Charger les données brutes du fichier plist
+            let data = try Data(contentsOf: url)
+            // Créer un décodeur PropertyListDecoder
+            let decoder = PropertyListDecoder()
+            // Décoder les données en tableau de Natinf
+            let decodedNatinfs = try decoder.decode([Natinf].self, from: data)
+            return decodedNatinfs
+        } catch {
+            print("Erreur lors du décodage du fichier natinfdb.plist : \(error)")
+            return []
+        }
+    }
 
     var filteredNatinfs: [Natinf] {
         if searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -15,20 +41,24 @@ struct NatinfListView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            List(filteredNatinfs, id: \.natinf) { item in
-                NavigationLink(destination: NatinfDetailView(natinf: item)) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("\(item.natinf) - \(item.qualificationPVe)")
-                            .font(.headline)
-                        Text(item.qualification)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+        NavigationView {
+            VStack {
+                TextField("Recherche d'infraction", text: $searchText)
+                    .padding(.horizontal)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                List(filteredNatinfs, id: \.natinf) { item in
+                    NavigationLink(destination: NatinfDetailView(natinf: item)) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("\(item.natinf) - \(item.qualificationPVe)")
+                                .font(.headline)
+                            Text(item.qualification)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
             }
-            .searchable(text: $searchText, prompt: Text("Recherche d'infraction"))
-            .navigationTitle("Infractions NATINF")
+            .navigationBarTitle("Infractions NATINF")
         }
     }
 }
@@ -39,35 +69,68 @@ struct NatinfDetailView: View {
     var body: some View {
         Form {
             Section(header: Text("Détail de l'infraction")) {
-                LabeledContent("Qualification PVe", value: natinf.qualificationPVe)
-                LabeledContent("Qualification", value: natinf.qualification)
-                LabeledContent("NATINF", value: String(natinf.natinf))
-                LabeledContent("Classe", value: String(natinf.classe))
-                LabeledContent("Montant amende", value: "\(natinf.montant_amende) €")
-                LabeledContent("Amende minorée", value: "\(natinf.montant_amende_minore) €")
-                LabeledContent("Retrait de point", value: String(natinf.retrait_de_point))
-                LabeledContent("Famille", value: natinf.famille)
-                LabeledContent("Prévu par", value: natinf.infraction_prevu)
-                LabeledContent("Réprimé par", value: natinf.infraction_reprime)
+                HStack {
+                    Text("Qualification PVe")
+                    Spacer()
+                    Text(natinf.qualificationPVe)
+                }
+                HStack {
+                    Text("Qualification")
+                    Spacer()
+                    Text(natinf.qualification)
+                }
+                HStack {
+                    Text("NATINF")
+                    Spacer()
+                    Text(String(natinf.natinf))
+                }
+                HStack {
+                    Text("Classe")
+                    Spacer()
+                    Text(String(natinf.classe))
+                }
+                HStack {
+                    Text("Montant amende")
+                    Spacer()
+                    Text("\(natinf.montant_amende) €")
+                }
+                HStack {
+                    Text("Amende minorée")
+                    Spacer()
+                    Text("\(natinf.montant_amende_minore) €")
+                }
+                HStack {
+                    Text("Retrait de point")
+                    Spacer()
+                    Text(String(natinf.retrait_de_point))
+                }
+                HStack {
+                    Text("Famille")
+                    Spacer()
+                    Text(natinf.famille)
+                }
+                HStack {
+                    Text("Prévu par")
+                    Spacer()
+                    Text(natinf.infraction_prevu)
+                }
+                HStack {
+                    Text("Réprimé par")
+                    Spacer()
+                    Text(natinf.infraction_reprime)
+                }
             }
         }
-        .navigationTitle("NATINF \(natinf.natinf)")
+        .navigationBarTitle("NATINF \(natinf.natinf)")
     }
 }
 
 #Preview {
-    NatinfListView(natinfs: [
-        Natinf(
-            qualificationPVe: "Conduite en état d'ivresse",
-            qualification: "Conduite sous l'empire d'un état alcoolique.",
-            natinf: 12345,
-            classe: 4,
-            montant_amende: 135,
-            montant_amende_minore: 90,
-            famille: "Alcool",
-            retrait_de_point: 6,
-            infraction_prevu: "Art. L234-1 Code de la route",
-            infraction_reprime: "Art. L234-2 Code de la route"
-        )
-    ])
+    NavigationView {
+        NatinfListView()
+            .environment(\.locale, .init(identifier: "fr")) // For consistent preview localization if needed
+            .onAppear {
+                // Nothing needed, as NatinfListView loads from plist by default.
+            }
+    }
 }

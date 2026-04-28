@@ -148,7 +148,7 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         }
      
     }
-    
+/*
     func filteredNatinfFromSearchBar(for searchText:String)   {
         
         if state == false {
@@ -169,7 +169,21 @@ class NatinfTableViewController: UITableViewController, UISearchResultsUpdating 
         tableView.reloadData()
     
     }
-    
+*/
+    func filteredNatinfFromSearchBar(for searchText:String)  {
+        if state == false {
+            _filteredsNatinfArray = _natinfsArray.filter({ (natinf: Natinf) -> Bool in
+                let range = NSString(string: natinf.qualification.lowercased()).range(of: searchText.lowercased(), options: .diacriticInsensitive)
+                return range.location != NSNotFound
+            })
+        } else {
+            _filteredsNatinfArray = _natinfsArray.filter({ (natinf: Natinf) -> Bool in
+                let range = NSString(string: String(natinf.natinf)).range(of: searchText, options: .diacriticInsensitive)
+                return range.location != NSNotFound
+            })
+        }
+        tableView.reloadData()
+    }
     
 }
 
