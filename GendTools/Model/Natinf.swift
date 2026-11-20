@@ -1,37 +1,41 @@
-//
-//  Natinf.swift
-//  DemoTableViewPlist
-//
-//  Created by Pascal Ormancey on 12/01/2021.
-//  Copyright © 2021 Pascal Ormancey. All rights reserved.
-//
-
-// Model de class Natinf
-
 import Foundation
 
-class Natinf {
-    var qualificationPVe: String
-    var qualification:String
-    var natinf: Int
-    var classe: Int
-    var montant_amende: Int
-    var montant_amende_minore: Int
-    var famille: String
-    var retrait_de_point: Int
-    var infraction_prevu: String
-    var infraction_reprime: String
-   
-    init(qualificationPVe: String, qualification:String, natinf:Int, classe:Int, montant_amende:Int, montant_amende_minore: Int , famille:String, retrait_de_point:Int, infraction_prevu: String, infraction_reprime: String) {
-        self.qualificationPVe = qualificationPVe
-        self.qualification = qualification
+struct Natinf: Identifiable {
+    let qualificationPVe: String
+    let qualification: String
+    let natinf: Int
+    let classe: Int
+    let montant_amende: Int
+    let montant_amende_minore: Int
+    let famille: String
+    let retrait_de_point: Int
+    let infraction_prevu: String
+    let infraction_reprime: String
+
+    var id: Int { natinf }
+
+    init?(dictionary: [String: Any]) {
+        guard let natinf = Self.integer(dictionary["Natinf"]),
+              let qualification = dictionary["Qualification"] as? String,
+              let qualificationPVe = dictionary["QualificationPVe"] as? String else {
+            return nil
+        }
+
         self.natinf = natinf
-        self.classe = classe
-        self.montant_amende = montant_amende
-        self.montant_amende_minore = montant_amende_minore
-        self.famille = famille
-        self.retrait_de_point = retrait_de_point
-        self.infraction_prevu = infraction_prevu
-        self.infraction_reprime = infraction_reprime
+        self.qualification = qualification
+        self.qualificationPVe = qualificationPVe
+        self.classe = Self.integer(dictionary["Classe"]) ?? 0
+        self.montant_amende = Self.integer(dictionary["Montant_amende"]) ?? 0
+        self.montant_amende_minore = Self.integer(dictionary["Montant_minore"]) ?? 0
+        self.famille = dictionary["Famille"] as? String ?? ""
+        self.retrait_de_point = Self.integer(dictionary["Retrait_points"]) ?? 0
+        self.infraction_prevu = dictionary["Prevu"] as? String ?? ""
+        self.infraction_reprime = dictionary["Reprime"] as? String ?? ""
+    }
+
+    private static func integer(_ value: Any?) -> Int? {
+        if let number = value as? NSNumber { return number.intValue }
+        if let string = value as? String { return Int(string) }
+        return nil
     }
 }
