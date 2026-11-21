@@ -10,7 +10,7 @@ struct MainTabView: View {
                 .tabItem { Label("Éthylomètre", systemImage: "wineglass") }
 
             NavigationView { NatinfListView() }
-                .tabItem { Label("NATINF", systemImage: "list.magnifyingglass") }
+                .tabItem { Label("NATINF", systemImage: "text.magnifyingglass") }
 
             NavigationView { SettingsView() }
                 .tabItem { Label("Réglages", systemImage: "gearshape") }
@@ -468,4 +468,8 @@ private enum NatinfStore {
         }
         return rows.compactMap(Natinf.init(dictionary:))
     }
+}
+
+#Preview {
+    MainTabView()
 }
