@@ -72,6 +72,7 @@ private struct SpeedCalculatorView: View {
     private let speedLimits = [30, 50, 70, 80, 90, 110, 130]
     @AppStorage("SPEED") private var speedLimit = 50
     @StateObject private var state = SpeedCalculatorState()
+    @FocusState private var isInputFocused: Bool
 
     var body: some View {
         ZStack {
@@ -103,8 +104,27 @@ private struct SpeedCalculatorView: View {
                             HStack(spacing: 12) {
                                 TextField("Ex. 98", text: $state.enteredSpeed)
                                     .keyboardType(.numberPad)
+                                    .focused($isInputFocused)
                                     .font(.title2.weight(.semibold))
-                                    .padding(14)
+                                    .padding(.leading, 14)
+                                    .padding(.vertical, 14)
+                                    .padding(.trailing, 42)
+                                    .overlay(alignment: .trailing) {
+                                        if !state.enteredSpeed.isEmpty {
+                                            Button {
+                                                withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                                                    state.enteredSpeed = ""
+                                                    state.result = nil
+                                                }
+                                            } label: {
+                                                Image(systemName: "xmark.circle.fill")
+                                                    .foregroundStyle(.secondary)
+                                            }
+                                            .buttonStyle(.plain)
+                                            .padding(.trailing, 14)
+                                            .accessibilityLabel("Effacer la saisie")
+                                        }
+                                    }
                                     .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12))
                                 Text("km/h")
                                     .font(.subheadline.weight(.semibold))
@@ -155,6 +175,14 @@ private struct SpeedCalculatorView: View {
         }
         .navigationTitle("Vitesse")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Terminé") {
+                    isInputFocused = false
+                }
+            }
+        }
         .onChange(of: speedLimit) { _ in state.result = nil }
         .alert("Erreur", isPresented: $state.isShowingError) {
             Button("OK", role: .cancel) { }
@@ -164,6 +192,7 @@ private struct SpeedCalculatorView: View {
     }
 
     private func calculate() {
+        isInputFocused = false
         guard let recorded = Int(state.enteredSpeed), recorded > 0 else {
             state.errorMessage = "Saisissez une vitesse enregistrée valide."
             state.isShowingError = true
@@ -190,6 +219,7 @@ private final class SpeedCalculatorState: ObservableObject {
 
 private struct AlcoholCalculatorView: View {
     @StateObject private var state = AlcoholCalculatorState()
+    @FocusState private var isInputFocused: Bool
 
     var body: some View {
         ZStack {
@@ -205,8 +235,27 @@ private struct AlcoholCalculatorView: View {
                             HStack(spacing: 12) {
                                 TextField("Ex. 0,25", text: $state.displayedRate)
                                     .keyboardType(.decimalPad)
+                                    .focused($isInputFocused)
                                     .font(.title2.weight(.semibold))
-                                    .padding(14)
+                                    .padding(.leading, 14)
+                                    .padding(.vertical, 14)
+                                    .padding(.trailing, 42)
+                                    .overlay(alignment: .trailing) {
+                                        if !state.displayedRate.isEmpty {
+                                            Button {
+                                                withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                                                    state.displayedRate = ""
+                                                    state.retainedRate = nil
+                                                }
+                                            } label: {
+                                                Image(systemName: "xmark.circle.fill")
+                                                    .foregroundStyle(.secondary)
+                                            }
+                                            .buttonStyle(.plain)
+                                            .padding(.trailing, 14)
+                                            .accessibilityLabel("Effacer la saisie")
+                                        }
+                                    }
                                     .background(Color(.tertiarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12))
                                 Text("mg/L")
                                     .font(.subheadline.weight(.semibold))
@@ -249,6 +298,14 @@ private struct AlcoholCalculatorView: View {
         }
         .navigationTitle("Éthylomètre")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Terminé") {
+                    isInputFocused = false
+                }
+            }
+        }
         .alert("Erreur", isPresented: $state.isShowingError) {
             Button("OK", role: .cancel) { }
         } message: {
@@ -257,6 +314,7 @@ private struct AlcoholCalculatorView: View {
     }
 
     private func calculate() {
+        isInputFocused = false
         let normalized = state.displayedRate.replacingOccurrences(of: ",", with: ".")
         guard let value = Double(normalized), value > 0 else {
             state.errorMessage = "Saisissez un taux décimal valide, par exemple 0,25."
